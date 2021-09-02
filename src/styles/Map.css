@@ -1,0 +1,12 @@
+#map_div {
+  border: 2px solid red;
+  text-align: center;
+}
+
+#map_container {
+  position: relative;
+  margin: auto;
+  background-color: rgb(34, 34, 34);
+  height: 700px;
+  width: 700px;
+}

@@ -24,6 +24,12 @@
   color: white;
 }
 
+#c_layer0 {
+  width: 9000px;
+  height: 9000px;
+  background-color: red;
+}
+
 .App-link {
   color: #61dafb;
 }
