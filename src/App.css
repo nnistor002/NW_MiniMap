@@ -42,3 +42,8 @@
     transform: rotate(360deg);
   }
 }
+
+#main_div {
+  width: auto;
+  height: 99vh;
+}

@@ -6,8 +6,7 @@ import Map from "./components/Map";
 class App extends Component {
   render() {
     return (
-      <div>
-        <Navbar />
+      <div id="main_div">
         <Map />
       </div>
     );
