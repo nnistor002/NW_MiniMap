@@ -41,12 +41,40 @@
 }
 
 #testIcon {
-  position: absolute;
-  border: 2px solid black;
   background-color: rgb(255, 0, 0);
-  border-radius: 50%;
   left: 2710px;
   top: 1790px;
-  min-width: 10px;
-  min-height: 10px;
+}
+
+#testIconOne {
+  background-color: rgb(255, 0, 0);
+  left: 3124px;
+  top: 1729px;
+}
+
+#testIconTwo {
+  background-color: rgb(255, 0, 0);
+  left: 3007px;
+  top: 1847px;
+}
+
+#testIconThree {
+  background-color: rgb(255, 0, 0);
+  left: 2854px;
+  top: 1658px;
+}
+
+#testIconFour {
+  background-color: rgb(255, 0, 0);
+  left: 1239px;
+  top: 2761px;
+}
+
+.iconDiv {
+  position: absolute;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  min-width: 5px;
+  min-height: 5px;
+  transform: scale(1);
 }
