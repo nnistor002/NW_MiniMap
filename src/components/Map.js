@@ -2,6 +2,12 @@ import React from "react";
 import "../styles/Map.css";
 
 import fullMap from "../images/New_World_Map_FinalSD.jpg";
+import welcomeImg from "../images/WelcomeScreen.png";
+
+import arrow_Up from "../images/icons/ArrowUp.png";
+import arrow_Down from "../images/icons/ArrowDown.png";
+import arrow_Left from "../images/icons/ArrowLeft.png";
+import arrow_Right from "../images/icons/ArrowRight.png";
 
 import { MapInteractionCSS } from "react-map-interaction";
 
@@ -23,15 +29,22 @@ class Map extends React.Component {
   }
 
   componentDidMount() {
+    window.addEventListener("auxclick", (e) => this.handleArchive(e));
+
     document
       .getElementById("full_Map")
       .addEventListener("mousemove", (e) => this.handleMousePosition(e));
+
+    setTimeout(function () {
+      document.getElementById("WelcomeDiv").hidden = true;
+    }, 10000);
   }
 
   componentDidUpdate() {
     this.handleIconScale(
       document.getElementById("full_Map").getBoundingClientRect().width
     );
+    this.handleGuidance();
   }
 
   handleMousePosition(e) {
@@ -91,6 +104,42 @@ class Map extends React.Component {
     }
   }
 
+  handleArchive(e) {
+    // Use offSet x and y to get map exact cords for the overlay...
+    let mapOffSetX = e.offsetX;
+    let mapOffSetY = e.offsetY;
+
+    console.log(mapOffSetX + " ---- " + mapOffSetY);
+  }
+
+  handleGuidance() {
+    let bounds = document.getElementById("full_Map").getBoundingClientRect();
+
+    if (bounds.top > 900) {
+      document.getElementById("arrowDown").hidden = false;
+    } else {
+      document.getElementById("arrowDown").hidden = true;
+    }
+
+    if (bounds.bottom < 1) {
+      document.getElementById("arrowUp").hidden = false;
+    } else {
+      document.getElementById("arrowUp").hidden = true;
+    }
+
+    if (bounds.left > 1200) {
+      document.getElementById("arrowRight").hidden = false;
+    } else {
+      document.getElementById("arrowRight").hidden = true;
+    }
+
+    if (bounds.right < 1) {
+      document.getElementById("arrowLeft").hidden = false;
+    } else {
+      document.getElementById("arrowLeft").hidden = true;
+    }
+  }
+
   render() {
     return (
       <div id="map_div">
@@ -101,6 +150,7 @@ class Map extends React.Component {
             onChange={(value) => this.setState({ value })}
             minScale={0.2}
             maxScale={1}
+            translationBounds={this.state.translationBounds}
           >
             <div
               id="overLayDiv"
@@ -116,7 +166,7 @@ class Map extends React.Component {
             <img
               id="full_Map"
               src={fullMap}
-              alt="??"
+              alt="Aeternum"
               width={this.state.imgSize}
               height={this.state.imgSize}
             />
@@ -126,6 +176,21 @@ class Map extends React.Component {
               {this.state.positionMouseX} - {this.state.positionMouseY}
             </h2>
           </div>
+          <div id="arrowUp" hidden={true}>
+            <img src={arrow_Up} alt="arrUp" />
+          </div>
+          <div id="arrowDown" hidden={true}>
+            <img src={arrow_Down} alt="arrDown" />
+          </div>
+          <div id="arrowLeft" hidden={true}>
+            <img src={arrow_Left} alt="arrLeft" />
+          </div>
+          <div id="arrowRight" hidden={true}>
+            <img src={arrow_Right} alt="arrRight" />
+          </div>
+        </div>
+        <div id="WelcomeDiv" hidden={false}>
+          <img id="imgWelcome" src={welcomeImg} alt="WelcomeImg" />
         </div>
       </div>
     );
