@@ -6,8 +6,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 700px;
   top: 50px;
   left: 50px;
 }
@@ -22,6 +22,7 @@
   border: 5px solid rgb(82, 65, 22);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
 #closeBTN:hover {
@@ -33,35 +34,37 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 25%;
+  top: 30%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
     0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
 #notePinBTN:hover {
   background-color: rgb(170, 122, 49);
 }
 
-#loggingBTN {
+#mobBTN {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 30%;
-  right: 30%;
+  top: 35%;
+  right: 35%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
     0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
-#loggingBTN:hover {
+#mobBTN:hover {
   background-color: rgb(170, 122, 49);
 }
 
@@ -70,13 +73,14 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 25%;
+  right: 30%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
     0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
 #miningBTN:hover {
@@ -88,54 +92,57 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 30%;
-  right: 30%;
+  bottom: 35%;
+  right: 35%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
     0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
 #harvestingBTN:hover {
   background-color: rgb(170, 122, 49);
 }
 
-#fishingBTN {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 25%;
-  width: 50px;
-  height: 50px;
-  box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
-    0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
-  border-radius: 50%;
-  background-color: rgb(212, 158, 20);
-}
-
-#fishingBTN:hover {
-  background-color: rgb(170, 122, 49);
-}
-
-#animalsBTN {
+#loggingBTN {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   bottom: 30%;
-  left: 30%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
     0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
-#animalsBTN:hover {
+#loggingBTN:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingBTN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35%;
+  left: 35%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
+    0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
+  border-radius: 50%;
+  background-color: rgb(212, 158, 20);
+  user-select: none;
+}
+
+#trackingBTN:hover {
   background-color: rgb(170, 122, 49);
 }
 
@@ -144,34 +151,47 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 25%;
+  left: 30%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
     0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
 #farmingBTN:hover {
   background-color: rgb(170, 122, 49);
 }
 
-#mobBTN {
+#fishingBTN {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 30%;
-  top: 30%;
+  left: 35%;
+  top: 35%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
     0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
   border-radius: 50%;
   background-color: rgb(212, 158, 20);
+  user-select: none;
 }
 
-#mobBTN:hover {
+#fishingBTN:hover {
   background-color: rgb(170, 122, 49);
+}
+
+#notePinSubDiv {
+  position: absolute;
+  width: 200px;
+  height: 85px;
+  background-color: rgb(212, 158, 20);
+  box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
+    0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
+  top: 15%;
+  border-radius: 10px;
 }
