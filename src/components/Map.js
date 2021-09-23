@@ -58,7 +58,12 @@ class Map extends React.Component {
       zoomStateFishingSubCat: false,
       windowMousePosX: 0,
       windowMousePosY: 0,
+      noteUserInput: "",
+      mobSubDivInput: "",
     };
+
+    this.handleNoteUserInput = this.handleNoteUserInput.bind(this);
+    this.handleMobDivInput = this.handleMobDivInput.bind(this);
   }
 
   componentDidMount() {
@@ -422,6 +427,22 @@ class Map extends React.Component {
     }
   }
 
+  handleNoteUserInput(event) {
+    this.setState({
+      noteUserInput: event.target.value,
+    });
+  }
+
+  handleNoteUserInputSubmit(event) {
+    alert(this.state.noteUserInput);
+  }
+
+  handleMobDivInput(event) {
+    this.setState({
+      mobSubDivInput: event.target.value,
+    });
+  }
+
   render() {
     return (
       <div id="map_div">
@@ -483,9 +504,26 @@ class Map extends React.Component {
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateNoteSubCat}
-                  timeout={{ enter: 200, exit: 500 }}
+                  timeout={{ enter: 200, exit: 200 }}
                 >
-                  <div id="notePinSubDiv"></div>
+                  <div id="notePinSubDiv">
+                    <form>
+                      <label>
+                        Details
+                        <input
+                          id="notePinSubDivInputBox"
+                          type="text"
+                          value={this.state.noteUserInput}
+                          onChange={this.handleNoteUserInput}
+                        />
+                      </label>
+                      <input
+                        id="notePinSubDivSubmitBTN"
+                        type="submit"
+                        value="Submit"
+                      />
+                    </form>
+                  </div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMainCategory.zoomMobBTN}
@@ -499,8 +537,34 @@ class Map extends React.Component {
                       width="42"
                       height="42"
                     ></img>
+                    <div></div>
                   </div>
                 </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMobSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="mobSubDivOption1">Mob</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMobSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="mobSubDivOption2">Elite</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMobSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <input
+                    id="mobSubDivInput"
+                    placeholder="Input Name..."
+                    type="text"
+                    value={this.state.mobSubDivInput}
+                    onChange={this.handleMobDivInput}
+                  />
+                </Zoom>
+
                 <Zoom
                   in={this.state.zoomStateMainCategory.zoomMiningBTN}
                   timeout={{ enter: 400, exit: 300 }}
@@ -515,6 +579,98 @@ class Map extends React.Component {
                     ></img>
                   </div>
                 </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 800, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionIron">Iron</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 700, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionSilver">Silver</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 600, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionGold">Gold</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 500, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionStarmetal">Starmetal</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 400, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionLodestone">Lodestone</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 300, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionPlatinum">Platinum</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionOrichalcum">Orichalcum</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 100, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionSeepingStone">SeepingStone</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionBlightcrag">Blightcrag</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 300, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionLifecrag">Lifecrag</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 400, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionEarthcrag">Earthcrag</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 500, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionSoulspire">Soulspire</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 600, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionShockspire">Shockspire</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 700, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionScorchstone">Scorchstone</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 800, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionSpringstone">Springstone</div>
+                </Zoom>
+
                 <Zoom
                   in={this.state.zoomStateMainCategory.zoomHarvestingBTN}
                   timeout={{ enter: 500, exit: 250 }}
@@ -543,6 +699,32 @@ class Map extends React.Component {
                     ></img>
                   </div>
                 </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateLoggingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="loggingSubCatDivOption1">Young</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateLoggingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="loggingSubCatDivOption2">Mature</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateLoggingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="loggingSubCatDivOption3">Wyrdwood</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateLoggingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="loggingSubCatDivOption4">Ironwood</div>
+                </Zoom>
+
                 <Zoom
                   in={this.state.zoomStateMainCategory.zoomTrackingBTN}
                   timeout={{ enter: 700, exit: 150 }}
