@@ -110,7 +110,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 30%;
+  left: 35%;
+  top: 35%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
@@ -163,13 +164,12 @@
   background-color: rgb(170, 122, 49);
 }
 
-#fishingBTN {
+#fungiBTN {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: 35%;
-  top: 35%;
+  bottom: 30%;
   width: 50px;
   height: 50px;
   box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
@@ -179,7 +179,7 @@
   user-select: none;
 }
 
-#fishingBTN:hover {
+#fungiBTN:hover {
   background-color: rgb(170, 122, 49);
 }
 
@@ -216,7 +216,7 @@
 #mobSubDivOption1 {
   position: absolute;
   min-width: 70px;
-  min-height: 25px;
+  min-height: 20px;
   background-color: rgb(212, 158, 20);
   border: 4px solid rgb(102, 79, 20);
   border-radius: 20px;
@@ -260,70 +260,38 @@
   user-select: none;
 }
 
-#loggingSubCatDivOption1 {
+#loggingSubCatDivWyrdwood {
   position: absolute;
-  min-width: 80px;
+  min-width: 100px;
   min-height: 20px;
   background-color: rgb(212, 158, 20);
   border: 4px solid rgb(102, 79, 20);
   border-radius: 20px;
-  bottom: 39%;
+  top: 36.5%;
+  left: 18%;
   font-weight: 700;
   color: rgb(102, 79, 20);
   user-select: none;
 }
 
-#loggingSubCatDivOption2 {
+#loggingSubCatDivIronwood {
   position: absolute;
-  min-width: 80px;
+  min-width: 100px;
   min-height: 20px;
   background-color: rgb(212, 158, 20);
   border: 4px solid rgb(102, 79, 20);
   border-radius: 20px;
-  bottom: 31.5%;
-  left: 32%;
+  top: 36.5%;
+  left: 44%;
   font-weight: 700;
   color: rgb(102, 79, 20);
   user-select: none;
 }
 
-#loggingSubCatDivOption3 {
-  position: absolute;
-  min-width: 90px;
-  min-height: 20px;
-  background-color: rgb(212, 158, 20);
-  border: 4px solid rgb(102, 79, 20);
-  border-radius: 20px;
-  bottom: 31.5%;
-  right: 30.5%;
-  font-weight: 700;
-  color: rgb(102, 79, 20);
-  user-select: none;
-}
-
-#loggingSubCatDivOption4 {
-  position: absolute;
-  min-width: 90px;
-  min-height: 20px;
-  background-color: rgb(212, 158, 20);
-  border: 4px solid rgb(102, 79, 20);
-  border-radius: 20px;
-  bottom: 24%;
-  font-weight: 700;
-  color: rgb(102, 79, 20);
-  user-select: none;
-}
-
-#loggingSubCatDivOption1:hover {
+#loggingSubCatDivWyrdwood:hover {
   background-color: rgb(170, 122, 49);
 }
-#loggingSubCatDivOption2:hover {
-  background-color: rgb(170, 122, 49);
-}
-#loggingSubCatDivOption3:hover {
-  background-color: rgb(170, 122, 49);
-}
-#loggingSubCatDivOption4:hover {
+#loggingSubCatDivIronwood:hover {
   background-color: rgb(170, 122, 49);
 }
 
@@ -593,5 +561,345 @@
 }
 
 #miningSubDivOptionSpringstone:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivStandard {
+  position: absolute;
+  bottom: 25%;
+  left: 6.5%;
+  color: rgb(212, 158, 20);
+  text-shadow: 2px 2px rgb(102, 79, 20), -2px 2px rgb(102, 79, 20),
+    -2px -2px rgb(102, 79, 20), 2px -2px rgb(102, 79, 20);
+  text-decoration: solid underline rgb(212, 158, 20) 3px;
+  user-select: none;
+}
+
+#harvestingSubDivMagical {
+  position: absolute;
+  bottom: 25%;
+  left: 40%;
+  color: rgb(212, 158, 20);
+  text-shadow: 2px 2px rgb(102, 79, 20), -2px 2px rgb(102, 79, 20),
+    -2px -2px rgb(102, 79, 20), 2px -2px rgb(102, 79, 20);
+  text-decoration: solid underline rgb(212, 158, 20) 3px;
+  user-select: none;
+}
+
+#harvestingSubDivCreatures {
+  position: absolute;
+  bottom: 25%;
+  right: 10%;
+  bottom: 45%;
+  color: rgb(212, 158, 20);
+  text-shadow: 2px 2px rgb(102, 79, 20), -2px 2px rgb(102, 79, 20),
+    -2px -2px rgb(102, 79, 20), 2px -2px rgb(102, 79, 20);
+  text-decoration: solid underline rgb(212, 158, 20) 3px;
+  user-select: none;
+}
+
+#harvestingSubDivOptionHemp {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 22%;
+  left: 5%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionHemp:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionSilkweed {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 17%;
+  left: 5%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionSilkweed:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionWirefiber {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 12%;
+  left: 5%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionWirefiber:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionBlightroot {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 22%;
+  left: 28%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionBlightroot:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionDragonglory {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 22%;
+  left: 47%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionDragonglory:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionEarthspine {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 17%;
+  left: 28%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionEarthspine:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionLifebloom {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 17%;
+  left: 47%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionLifebloom:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionRivercress {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 12%;
+  left: 28%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionRivercress:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionShockblub {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 12%;
+  left: 47%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionShockblub:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionSoulspire {
+  position: absolute;
+  min-width: 120px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 12%;
+  left: 5%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionSoulspire:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionBlightmoth {
+  position: absolute;
+  min-width: 140px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  right: 7.5%;
+  bottom: 42%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionBlightmoth:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionEarthshell {
+  position: absolute;
+  min-width: 140px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  right: 7.5%;
+  bottom: 37%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionEarthshell:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionFloatingFish {
+  position: absolute;
+  min-width: 140px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  right: 7.5%;
+  bottom: 32%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionFloatingFish:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionLifemoth {
+  position: absolute;
+  min-width: 140px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  right: 7.5%;
+  bottom: 27%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionLifemoth:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionLightning {
+  position: absolute;
+  min-width: 140px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  right: 7.5%;
+  bottom: 22%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionLightning:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionSalamander {
+  position: absolute;
+  min-width: 140px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  right: 7.5%;
+  bottom: 17%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionSalamander:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#harvestingSubDivOptionSoulwyrm {
+  position: absolute;
+  min-width: 140px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  right: 7.5%;
+  bottom: 12%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#harvestingSubDivOptionSoulwyrm:hover {
   background-color: rgb(170, 122, 49);
 }

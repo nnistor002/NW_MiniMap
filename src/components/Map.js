@@ -16,10 +16,10 @@ import mining from "../images/menuIcons/Mining.png";
 import harvesting from "../images/menuIcons/Harvesting.png";
 import logging from "../images/menuIcons/Logging.png";
 import notepin from "../images/menuIcons/NotePin.png";
-import fishing from "../images/menuIcons/Fishing.png";
 import animal from "../images/menuIcons/Animal.png";
 import farming from "../images/menuIcons/Farming.png";
 import mobs from "../images/menuIcons/Mobs.png";
+import fungi from "../images/menuIcons/Fungi.png";
 
 import { MapInteractionCSS } from "react-map-interaction";
 
@@ -46,7 +46,7 @@ class Map extends React.Component {
         zoomLoggingBTN: false,
         zoomTrackingBTN: false,
         zoomFarmingBTN: false,
-        zoomFishingBTN: false,
+        zoomFungiBTN: false,
       },
       zoomStateNoteSubCat: false,
       zoomStateMobSubCat: false,
@@ -55,7 +55,7 @@ class Map extends React.Component {
       zoomStateLoggingSubCat: false,
       zoomStateTrackingSubCat: false,
       zoomStateFarmingSubCat: false,
-      zoomStateFishingSubCat: false,
+      zoomStateFungiSubCat: false,
       windowMousePosX: 0,
       windowMousePosY: 0,
       noteUserInput: "",
@@ -102,8 +102,8 @@ class Map extends React.Component {
       .addEventListener("click", () => this.farmingBTN());
 
     document
-      .getElementById("fishingBTN")
-      .addEventListener("click", () => this.fishingBTN());
+      .getElementById("fungiBTN")
+      .addEventListener("click", () => this.fungiBTN());
 
     document
       .getElementById("full_Map")
@@ -115,7 +115,7 @@ class Map extends React.Component {
 
     setTimeout(function () {
       document.getElementById("WelcomeDiv").hidden = true;
-    }, 1000);
+    }, 6000);
   }
 
   componentDidUpdate() {
@@ -253,7 +253,7 @@ class Map extends React.Component {
       zoomStateLoggingSubCat: false,
       zoomStateTrackingSubCat: false,
       zoomStateFarmingSubCat: false,
-      zoomStateFishingSubCat: false,
+      zoomStateFungiSubCat: false,
       zoomStateMain: false,
     });
     this.toggleMainCategory(false);
@@ -270,7 +270,7 @@ class Map extends React.Component {
           zoomLoggingBTN: true,
           zoomTrackingBTN: true,
           zoomFarmingBTN: true,
-          zoomFishingBTN: true,
+          zoomFungiBTN: true,
         },
       });
     }
@@ -285,7 +285,7 @@ class Map extends React.Component {
           zoomLoggingBTN: false,
           zoomTrackingBTN: false,
           zoomFarmingBTN: false,
-          zoomFishingBTN: false,
+          zoomFungiBTN: false,
         },
       });
     }
@@ -410,19 +410,19 @@ class Map extends React.Component {
     }
   }
 
-  fishingBTN() {
-    if (this.state.zoomStateFishingSubCat === false) {
+  fungiBTN() {
+    if (this.state.zoomStateFungiSubCat === false) {
       this.toggleMainCategory(false);
       this.setState({
-        zoomStateFishingSubCat: true,
+        zoomStateFungiSubCat: true,
         zoomStateMainCategory: {
-          zoomFishingBTN: true,
+          zoomFungiBTN: true,
         },
       });
     } else {
       this.toggleMainCategory(true);
       this.setState({
-        zoomStateFishingSubCat: false,
+        zoomStateFungiSubCat: false,
       });
     }
   }
@@ -685,6 +685,143 @@ class Map extends React.Component {
                     ></img>
                   </div>
                 </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <h2 id="harvestingSubDivStandard">Standard</h2>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <h2 id="harvestingSubDivMagical">Magical</h2>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <h2 id="harvestingSubDivCreatures">Creatures</h2>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionHemp">Hemp</div>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionSilkweed">Silkweed</div>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionWirefiber">Wirefiber</div>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionBlightroot">Blightroot</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionDragonglory">Dragonglory</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionEarthspine">Earthspine</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionLifebloom">Lifebloom</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionRivercress">Rivercress</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionShockblub">Shockblub</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionSoulspire">Soulspire</div>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionBlightmoth">Blightmoth</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionEarthshell">
+                    Earthshell Turtle
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionFloatingFish">
+                    Floating Spinefish
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionLifemoth">Lifemoth</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionLightning">
+                    Lightning Beetle
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionSalamander">
+                    Salamander Snail
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateHarvestingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="harvestingSubDivOptionSoulwyrm">Soulwyrm</div>
+                </Zoom>
+
                 <Zoom
                   in={this.state.zoomStateMainCategory.zoomLoggingBTN}
                   timeout={{ enter: 600, exit: 200 }}
@@ -699,30 +836,17 @@ class Map extends React.Component {
                     ></img>
                   </div>
                 </Zoom>
-
                 <Zoom
                   in={this.state.zoomStateLoggingSubCat}
                   timeout={{ enter: 200, exit: 200 }}
                 >
-                  <div id="loggingSubCatDivOption1">Young</div>
+                  <div id="loggingSubCatDivWyrdwood">Wyrdwood</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateLoggingSubCat}
                   timeout={{ enter: 200, exit: 200 }}
                 >
-                  <div id="loggingSubCatDivOption2">Mature</div>
-                </Zoom>
-                <Zoom
-                  in={this.state.zoomStateLoggingSubCat}
-                  timeout={{ enter: 200, exit: 200 }}
-                >
-                  <div id="loggingSubCatDivOption3">Wyrdwood</div>
-                </Zoom>
-                <Zoom
-                  in={this.state.zoomStateLoggingSubCat}
-                  timeout={{ enter: 200, exit: 200 }}
-                >
-                  <div id="loggingSubCatDivOption4">Ironwood</div>
+                  <div id="loggingSubCatDivIronwood">Ironwood</div>
                 </Zoom>
 
                 <Zoom
@@ -754,14 +878,14 @@ class Map extends React.Component {
                   </div>
                 </Zoom>
                 <Zoom
-                  in={this.state.zoomStateMainCategory.zoomFishingBTN}
+                  in={this.state.zoomStateMainCategory.zoomFungiBTN}
                   timeout={{ enter: 900, exit: 50 }}
                 >
-                  <div id="fishingBTN">
+                  <div id="fungiBTN">
                     <img
-                      src={fishing}
-                      alt="Fishing"
-                      title="Fishing"
+                      src={fungi}
+                      alt="Fungi"
+                      title="Fungi"
                       width="42"
                       height="42"
                     ></img>
