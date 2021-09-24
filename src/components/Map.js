@@ -582,31 +582,51 @@ class Map extends React.Component {
 
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 800, exit: 200 }}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <h2 id="miningSubDivOreTitle">Standard Ores</h2>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <h2 id="miningSubDivElementalTitle">Elemental Ore</h2>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 300, exit: 200 }}
+                >
+                  <div id="miningSubDivOptionSalt">Saltpeter</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateMiningSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
                 >
                   <div id="miningSubDivOptionIron">Iron</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 700, exit: 200 }}
+                  timeout={{ enter: 100, exit: 200 }}
                 >
                   <div id="miningSubDivOptionSilver">Silver</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 600, exit: 200 }}
+                  timeout={{ enter: 300, exit: 200 }}
                 >
                   <div id="miningSubDivOptionGold">Gold</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 500, exit: 200 }}
+                  timeout={{ enter: 200, exit: 200 }}
                 >
                   <div id="miningSubDivOptionStarmetal">Starmetal</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 400, exit: 200 }}
+                  timeout={{ enter: 100, exit: 200 }}
                 >
                   <div id="miningSubDivOptionLodestone">Lodestone</div>
                 </Zoom>
@@ -630,43 +650,43 @@ class Map extends React.Component {
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 200, exit: 200 }}
+                  timeout={{ enter: 100, exit: 200 }}
                 >
                   <div id="miningSubDivOptionBlightcrag">Blightcrag</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 300, exit: 200 }}
+                  timeout={{ enter: 100, exit: 200 }}
                 >
                   <div id="miningSubDivOptionLifecrag">Lifecrag</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 400, exit: 200 }}
+                  timeout={{ enter: 200, exit: 200 }}
                 >
                   <div id="miningSubDivOptionEarthcrag">Earthcrag</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 500, exit: 200 }}
+                  timeout={{ enter: 200, exit: 200 }}
                 >
                   <div id="miningSubDivOptionSoulspire">Soulspire</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 600, exit: 200 }}
+                  timeout={{ enter: 300, exit: 200 }}
                 >
                   <div id="miningSubDivOptionShockspire">Shockspire</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 700, exit: 200 }}
+                  timeout={{ enter: 300, exit: 200 }}
                 >
                   <div id="miningSubDivOptionScorchstone">Scorchstone</div>
                 </Zoom>
                 <Zoom
                   in={this.state.zoomStateMiningSubCat}
-                  timeout={{ enter: 800, exit: 200 }}
+                  timeout={{ enter: 400, exit: 200 }}
                 >
                   <div id="miningSubDivOptionSpringstone">Springstone</div>
                 </Zoom>
@@ -823,30 +843,129 @@ class Map extends React.Component {
                 </Zoom>
 
                 <Zoom
-                  in={this.state.zoomStateMainCategory.zoomLoggingBTN}
-                  timeout={{ enter: 600, exit: 200 }}
+                  in={this.state.zoomStateMainCategory.zoomFungiBTN}
+                  timeout={{ enter: 600, exit: 50 }}
                 >
-                  <div id="loggingBTN">
+                  <div id="fungiBTN">
                     <img
-                      src={logging}
-                      alt="Logging"
-                      title="Logging"
+                      src={fungi}
+                      alt="Fungi"
+                      title="Fungi"
                       width="42"
                       height="42"
                     ></img>
                   </div>
                 </Zoom>
+
                 <Zoom
-                  in={this.state.zoomStateLoggingSubCat}
+                  in={this.state.zoomStateFungiSubCat}
                   timeout={{ enter: 200, exit: 200 }}
                 >
-                  <div id="loggingSubCatDivWyrdwood">Wyrdwood</div>
+                  <div id="fungiSubDivOptionBumbleblossom">Bumbleblossom</div>
                 </Zoom>
                 <Zoom
-                  in={this.state.zoomStateLoggingSubCat}
+                  in={this.state.zoomStateFungiSubCat}
                   timeout={{ enter: 200, exit: 200 }}
                 >
-                  <div id="loggingSubCatDivIronwood">Ironwood</div>
+                  <div id="fungiSubDivOptionCappedTanglewisp">
+                    Capped Tanglewisp
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionCascadedgillflower">
+                    Cascaded Gillflower
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionCorruptedbloodspore">
+                    Corrupted Bloodspore
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionFloweringtubecap">
+                    Flowering Tubecap
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionFrondedpetalcap">
+                    Fronded Petalcap
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionSlimytwistcap">Slimy Twistcap</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionSpinecap">Spinecap</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionSuncreeper">Suncreeper</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionTanglewisp">Tanglewisp</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionTendrilspine">Tendrilspine</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionToadpot">Toadpot</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionTwistedtubecap">
+                    Twisted Tubecap
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionVoidpitcher">Void Pitcher</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionWarmplatecap">Warm Platecap</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFungiSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="fungiSubDivOptionWeepingshellbed">
+                    Weeping Shellbed
+                  </div>
                 </Zoom>
 
                 <Zoom
@@ -877,19 +996,32 @@ class Map extends React.Component {
                     ></img>
                   </div>
                 </Zoom>
+
                 <Zoom
-                  in={this.state.zoomStateMainCategory.zoomFungiBTN}
-                  timeout={{ enter: 900, exit: 50 }}
+                  in={this.state.zoomStateMainCategory.zoomLoggingBTN}
+                  timeout={{ enter: 900, exit: 200 }}
                 >
-                  <div id="fungiBTN">
+                  <div id="loggingBTN">
                     <img
-                      src={fungi}
-                      alt="Fungi"
-                      title="Fungi"
+                      src={logging}
+                      alt="Logging"
+                      title="Logging"
                       width="42"
                       height="42"
                     ></img>
                   </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateLoggingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="loggingSubCatDivWyrdwood">Wyrdwood</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateLoggingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="loggingSubCatDivIronwood">Ironwood</div>
                 </Zoom>
               </div>
             </Zoom>
