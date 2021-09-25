@@ -14,3 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it.
 ### `yarn electron-react`
 
 To run it using electron which makes it look like a desktop app.
+
+```diff
+- UNDER DEVELOPMENT -
+```
