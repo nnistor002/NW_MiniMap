@@ -460,11 +460,7 @@ class Map extends React.Component {
               width={this.state.imgSize}
               height={this.state.imgSize}
             >
-              <div className="iconDiv" id="testIcon"></div>
-              <div className="iconDiv" id="testIconOne"></div>
-              <div className="iconDiv" id="testIconTwo"></div>
-              <div className="iconDiv" id="testIconThree"></div>
-              <div className="iconDiv" id="testIconFour"></div>
+              <div className="iconDiv" id="testIcon" title="TestPin0"></div>
             </div>
             <img
               id="full_Map"
