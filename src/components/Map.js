@@ -982,6 +982,118 @@ class Map extends React.Component {
                     ></img>
                   </div>
                 </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionAlligator">Alligator</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionBear">Bear</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionBison">Bison</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionBoar">Boar</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionBobcat">Bobcat</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionCow">Cow</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionElk">Elk</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionGoat">Goat</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionLion">Lion</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionLynx">Lynx</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionPig">Pig</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionRabbit">Rabbit</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionSheep">Sheep</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionTurkey">Turkey</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionWolf">Wolf</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionForestE">Forest Elemental</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionMountainE">
+                    Mountain Elemental
+                  </div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateTrackingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="trackingSubDivOptionTundraE">Tundra Elemental</div>
+                </Zoom>
+
                 <Zoom
                   in={this.state.zoomStateMainCategory.zoomFarmingBTN}
                   timeout={{ enter: 800, exit: 100 }}
@@ -995,6 +1107,117 @@ class Map extends React.Component {
                       height="42"
                     ></img>
                   </div>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <h2 id="farmingSubDivVegetables">Vegetables</h2>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <h2 id="farmingSubDivFruits">Fruits</h2>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionBarley">Barley</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionBerry">Berry</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionBlueberry">Blueberry</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionBroccoli">Broccoli</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionCabbage">Cabbage</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionCarrot">Carrot</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionCorn">Corn</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionCranberries">Cranberries</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionHerbs">Herbs</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionHoney">Honey</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionMelon">Melon</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionNuts">Nuts</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionPotato">Potato</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionSquash">Squash</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionStrawberry">Strawberry</div>
+                </Zoom>
+                <Zoom
+                  in={this.state.zoomStateFarmingSubCat}
+                  timeout={{ enter: 200, exit: 200 }}
+                >
+                  <div id="farmingSubDivOptionWheat">Wheat</div>
                 </Zoom>
 
                 <Zoom
