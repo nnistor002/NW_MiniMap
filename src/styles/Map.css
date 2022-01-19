@@ -58,7 +58,7 @@
 
 #arrowUp {
   position: fixed;
-  top: 2px;
+  top: 50px;
   margin: auto;
   width: 100%;
   pointer-events: none;
