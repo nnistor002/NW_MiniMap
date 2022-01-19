@@ -1,5 +1,7 @@
 #nav_bar {
   display: flex;
+  position: absolute;
+  top: 2px;
   text-align: center;
   height: 35px;
   width: 95%;
