@@ -81,32 +81,32 @@ class Map extends React.Component {
 
     if (newMapWH > 750 && newMapWH < 1250) {
       for (let x = 0; x < iconArray.length; x++) {
-        iconArray[x].style.transform = "scale(4)";
+        iconArray[x].style.transform = "scale(4.2)";
       }
     }
     if (newMapWH > 1250 && newMapWH < 1750) {
       for (let x = 0; x < iconArray.length; x++) {
-        iconArray[x].style.transform = "scale(3)";
+        iconArray[x].style.transform = "scale(3.2)";
       }
     }
     if (newMapWH > 1750 && newMapWH < 2500) {
       for (let x = 0; x < iconArray.length; x++) {
-        iconArray[x].style.transform = "scale(2.5)";
+        iconArray[x].style.transform = "scale(2.7)";
       }
     }
     if (newMapWH > 2500 && newMapWH < 3700) {
       for (let x = 0; x < iconArray.length; x++) {
-        iconArray[x].style.transform = "scale(2)";
+        iconArray[x].style.transform = "scale(2.2)";
       }
     }
     if (newMapWH > 3700 && newMapWH < 4500) {
       for (let x = 0; x < iconArray.length; x++) {
-        iconArray[x].style.transform = "scale(1.5)";
+        iconArray[x].style.transform = "scale(1.7)";
       }
     }
     if (newMapWH > 4500 && newMapWH < 6100) {
       for (let x = 0; x < iconArray.length; x++) {
-        iconArray[x].style.transform = "scale(1)";
+        iconArray[x].style.transform = "scale(1.2)";
       }
     }
   }
@@ -151,13 +151,12 @@ class Map extends React.Component {
             maxScale={1}
             translationBounds={this.state.translationBounds}
           >
+            {/* This is where the div icons will be placed */}
             <div
               id="overLayDiv"
               width={this.state.imgSize}
               height={this.state.imgSize}
-            >
-              <div className="iconDiv" id="testIcon" title="TestPin0"></div>
-            </div>
+            ></div>
             <img
               id="full_Map"
               src={fullMap}

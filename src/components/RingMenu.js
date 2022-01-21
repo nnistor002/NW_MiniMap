@@ -86,6 +86,11 @@ class RingMenu extends React.Component {
     document
       .getElementById("fungiBTN")
       .addEventListener("click", () => this.fungiBTN());
+
+    //SubCate Wood BTNs
+    document
+      .getElementById("loggingSubCatDivIronwood")
+      .addEventListener("click", () => this.sub_IronWoodBTN());
   }
 
   handleWindowMousePos(e) {
@@ -105,6 +110,8 @@ class RingMenu extends React.Component {
       // CREATE BORDER LOGIC IF CLICK IS NEXT TO SIDE OF SCREEN
       z.style.left = this.state.windowMousePosX - 360 + "px";
       z.style.top = this.state.windowMousePosY - 350 + "px";
+
+      //console.log(this.props.trackXY);
 
       this.setState({
         zoomStateMain: true,
@@ -294,6 +301,21 @@ class RingMenu extends React.Component {
         zoomStateFungiSubCat: false,
       });
     }
+  }
+
+  //SubCate BTN Functions
+
+  sub_IronWoodBTN() {
+    let newPin = document.createElement("div", {});
+    newPin.id = "testIcon";
+    newPin.className = "iconDiv";
+    newPin.style.left = this.props.trackXY[0] + "px";
+    newPin.style.top = this.props.trackXY[1] + "px";
+    newPin.title = "IronWood";
+    newPin.dataset.category = "Logging";
+    document.getElementById("overLayDiv").appendChild(newPin);
+
+    this.closeBTN();
   }
 
   handleNoteUserInput(event) {

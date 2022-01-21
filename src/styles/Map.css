@@ -42,16 +42,14 @@
 
 #testIcon {
   background-color: rgb(255, 0, 0);
-  left: 2710px;
-  top: 1790px;
 }
 
 .iconDiv {
   position: absolute;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 50%;
-  min-width: 5px;
-  min-height: 5px;
+  min-width: 6px;
+  min-height: 6px;
   transform: scale(4);
   pointer-events: fill;
 }

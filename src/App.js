@@ -14,6 +14,7 @@ class App extends Component {
     document.getElementById("WelcomeDiv").style.visibility = "hidden";
   }
 
+  // Working on it....
   uploadExisitingFile(e) {
     let file = e.target.files[0];
     let reader = new FileReader();
@@ -27,15 +28,22 @@ class App extends Component {
 
     setTimeout(() => {
       //How to find out the Categories
-      console.log(Object.keys(this.props.data[0]).toString());
+      //console.log(Object.keys(this.props.data[0]).toString());
 
-      //How to add to cords new Arrays targetting subCates
-      let targetSubCate = this.props.data[0].Logging[0].cords;
-      console.log(targetSubCate);
-      targetSubCate.push([3333, 3333]);
-      targetSubCate.push([4444, 4444]);
-      console.log(targetSubCate);
+      for (let i = 0; i < this.props.data.length; i++) {
+        let categorie = this.props.data[i];
+        console.log(categorie);
+      }
+
+      // //How to add to cords new Arrays targetting subCates
+      // let targetSubCate = this.props.data[0].Logging[0].cords;
+      // console.log(targetSubCate);
+      // targetSubCate.push([3333, 3333]);
+      // targetSubCate.push([4444, 4444]);
+      // console.log(targetSubCate);
     }, 1000);
+
+    //this.turnOffWelcomeDiv();
   }
 
   render() {
