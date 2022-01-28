@@ -1,7 +1,7 @@
 #nav_bar {
   display: flex;
   position: absolute;
-  top: 2px;
+  top: 3px;
   text-align: center;
   height: 35px;
   width: 95%;

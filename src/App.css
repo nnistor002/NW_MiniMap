@@ -18,12 +18,46 @@
   right: 4px;
   background-color: white;
   visibility: visible;
+  z-index: 2;
 }
 
 #imgWelcome {
   position: absolute;
   width: 90%;
   height: 80%;
+}
+
+#loadingIcon {
+  position: absolute;
+  width: 30%;
+  height: 20px;
+  border: 5px solid rgb(102, 79, 20);
+  border-radius: 50px;
+  margin: auto;
+  bottom: 24%;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 20%,
+    rgb(102, 79, 20) 50%,
+    rgb(255, 255, 255) 80%
+  );
+  background-size: 800px 104px;
+  visibility: visible;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
 }
 
 #upLoadBTN {
@@ -54,6 +88,7 @@
   background-color: rgb(212, 158, 20);
   border: 7px solid rgb(102, 79, 20);
   border-radius: 10px;
+  visibility: hidden;
 }
 
 #newBTN:hover {
@@ -71,6 +106,7 @@
   background-color: rgb(212, 158, 20);
   border: 3px solid rgb(102, 79, 20);
   border-radius: 10px;
+  visibility: hidden;
 }
 
 #divTitleUpload {
@@ -79,4 +115,5 @@
   left: 22%;
   color: rgb(102, 79, 20);
   font-weight: 900;
+  visibility: hidden;
 }
