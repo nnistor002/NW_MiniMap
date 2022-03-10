@@ -1,0 +1,54 @@
+#loggingBTN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
+    0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
+  border-radius: 50%;
+  background-color: rgb(212, 158, 20);
+  user-select: none;
+}
+
+#loggingBTN:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#loggingSubCatDivWyrdwood {
+  position: absolute;
+  min-width: 100px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 32%;
+  left: 18%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#loggingSubCatDivIronwood {
+  position: absolute;
+  min-width: 100px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 40%;
+  left: 18%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#loggingSubCatDivWyrdwood:hover {
+  background-color: rgb(170, 122, 49);
+}
+#loggingSubCatDivIronwood:hover {
+  background-color: rgb(170, 122, 49);
+}

@@ -1,0 +1,349 @@
+#trackingBTN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 35%;
+  left: 35%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
+    0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
+  border-radius: 50%;
+  background-color: rgb(212, 158, 20);
+  user-select: none;
+}
+
+#trackingBTN:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionAlligator {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 58%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionAlligator:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionBear {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 52%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionBear:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionBison {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 46%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionBison:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionBoar {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 40%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionBoar:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionBobcat {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 34%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionBobcat:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionCow {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 28%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionCow:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionElk {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 22%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionElk:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionGoat {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 16%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionGoat:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionLion {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 10%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionLion:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionLynx {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 4%;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionLynx:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionPig {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 28%;
+  left: 32%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionPig:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionRabbit {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 22%;
+  left: 32%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionRabbit:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionSheep {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 16%;
+  left: 32%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionSheep:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionTurkey {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 10%;
+  left: 32%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionTurkey:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionWolf {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 4%;
+  left: 32%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionWolf:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionForestE {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 22%;
+  left: 61%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionForestE:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionMountainE {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 16%;
+  left: 61%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionMountainE:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#trackingSubDivOptionTundraE {
+  position: absolute;
+  min-width: 170px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 10%;
+  left: 61%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#trackingSubDivOptionTundraE:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#cateContainerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

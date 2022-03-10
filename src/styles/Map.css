@@ -40,18 +40,20 @@
   pointer-events: none;
 }
 
-#testIcon {
-  background-color: rgb(255, 0, 0);
-}
-
 .iconDiv {
   position: absolute;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 50%;
-  min-width: 6px;
-  min-height: 6px;
+  width: 20px;
+  height: 20px;
   transform: scale(4);
-  pointer-events: fill;
+  pointer-events: all;
+  background-color: rgb(102, 79, 20);
+  box-shadow: rgba(214, 176, 79, 0.8) 0px 0px 20px 10px;
+}
+
+.iconDiv:hover {
+  background-color: rgb(212, 158, 20);
 }
 
 #arrowUp {

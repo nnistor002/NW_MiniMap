@@ -1,0 +1,72 @@
+#mobBTN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  right: 35%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
+    0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
+  border-radius: 50%;
+  background-color: rgb(212, 158, 20);
+  user-select: none;
+}
+
+#mobBTN:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#mobSubDivOption1 {
+  position: absolute;
+  min-width: 70px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 29%;
+  right: 33%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#mobSubDivOption1:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#mobSubDivOption2 {
+  position: absolute;
+  min-width: 70px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 43.5%;
+  right: 33%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#mobSubDivOption2:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#mobSubDivInput {
+  position: absolute;
+  top: 37%;
+  right: 17%;
+  width: 100px;
+  border: 3px solid rgb(102, 79, 20);
+  border-radius: 5px;
+  outline-color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#cateContainerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

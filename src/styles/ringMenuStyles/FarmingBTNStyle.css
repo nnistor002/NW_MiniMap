@@ -1,0 +1,333 @@
+#farmingBTN {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 30%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 5px 0px rgb(102, 79, 20), -5px 0px rgb(102, 79, 20),
+    0px 5px rgb(102, 79, 20), 0px -5px rgb(102, 79, 20);
+  border-radius: 50%;
+  background-color: rgb(212, 158, 20);
+  user-select: none;
+}
+
+#farmingBTN:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivVegetables {
+  position: absolute;
+  left: 35%;
+  top: 33%;
+  color: rgb(212, 158, 20);
+  text-shadow: 2px 2px rgb(102, 79, 20), -2px 2px rgb(102, 79, 20),
+    -2px -2px rgb(102, 79, 20), 2px -2px rgb(102, 79, 20);
+  text-decoration: solid underline rgb(212, 158, 20) 3px;
+  user-select: none;
+}
+
+#farmingSubDivFruits {
+  position: absolute;
+  left: 39%;
+  bottom: 33%;
+  color: rgb(212, 158, 20);
+  text-shadow: 2px 2px rgb(102, 79, 20), -2px 2px rgb(102, 79, 20),
+    -2px -2px rgb(102, 79, 20), 2px -2px rgb(102, 79, 20);
+  text-decoration: solid underline rgb(212, 158, 20) 3px;
+  user-select: none;
+}
+
+#farmingSubDivOptionBarley {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 12%;
+  left: 20%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionBarley:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionBerry {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 30%;
+  left: 20%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionBerry:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionBlueberry {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 24%;
+  left: 20%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionBlueberry:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionBroccoli {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 18%;
+  left: 20%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionBroccoli:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionCabbage {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 24%;
+  left: 20%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionCabbage:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionCarrot {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 30%;
+  left: 20%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionCarrot:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionCorn {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 12%;
+  left: 45%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionCorn:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionCranberries {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 18%;
+  left: 20%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionCranberries:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionHerbs {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  left: 7%;
+  top: 42%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionHerbs:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionHoney {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  left: 3%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionHoney:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionMelon {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 30%;
+  left: 45%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionMelon:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionNuts {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  left: 7%;
+  bottom: 42%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionNuts:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionPotato {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 18%;
+  left: 45%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionPotato:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionSquash {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 24%;
+  left: 45%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionSquash:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionStrawberry {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  bottom: 24%;
+  left: 45%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionStrawberry:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#farmingSubDivOptionWheat {
+  position: absolute;
+  min-width: 150px;
+  min-height: 20px;
+  background-color: rgb(212, 158, 20);
+  border: 4px solid rgb(102, 79, 20);
+  border-radius: 20px;
+  top: 30%;
+  left: 45%;
+  font-weight: 700;
+  color: rgb(102, 79, 20);
+  user-select: none;
+}
+
+#farmingSubDivOptionWheat:hover {
+  background-color: rgb(170, 122, 49);
+}
+
+#cateContainerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
