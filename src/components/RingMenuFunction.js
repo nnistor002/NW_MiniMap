@@ -13,6 +13,8 @@ import animal from "../images/menuIcons/Animal.png";
 import farming from "../images/menuIcons/Farming.png";
 import mobs from "../images/menuIcons/Mobs.png";
 
+//Testing git push from another workstation
+
 class RingMenu extends React.Component {
   constructor(props) {
     super(props);
