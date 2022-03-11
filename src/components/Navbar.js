@@ -51,186 +51,258 @@ class Navbar extends React.Component {
         <div id="nav_bar">
           <div id="toggle_div">
             <button id="toggle_BTN" onClick={this.showFilters}>
-              ----------- Toggle Menu -----------
+              ----------- Toggle Filter Menu -----------
             </button>
           </div>
         </div>
 
         <Zoom
           in={this.state.showFilterBTNs}
-          timeout={{ enter: 100, exit: 700 }}
+          timeout={{ enter: 100, exit: 500 }}
         >
           <div id="mainContainer">
-            <Zoom
-              in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
-            >
-              <div>
-                <button className="filterBtnCate">Notes</button>
+            <div id="lessSubCateDivContainer">
+              <div id="innerLessSubCateDivContainer">
+                <Zoom
+                  in={this.state.showFilterBTNs}
+                  timeout={{ enter: 400, exit: 500 }}
+                >
+                  <button className="filterBtnCate">Notes</button>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.showFilterBTNs}
+                  timeout={{ enter: 450, exit: 350 }}
+                >
+                  <div className="box">
+                    <div id="innerBoxSpacer">
+                      <input
+                        id="noteTextInput"
+                        type="text"
+                        placeholder="Input a keyword to look for..."
+                      />
+                    </div>
+                  </div>
+                </Zoom>
               </div>
-            </Zoom>
+              <div className="spacerV"></div>
+              <div id="innerLessSubCateDivContainer">
+                <Zoom
+                  in={this.state.showFilterBTNs}
+                  timeout={{ enter: 450, exit: 350 }}
+                >
+                  <button className="filterBtnCate">Mobs</button>
+                </Zoom>
+
+                <Zoom
+                  in={this.state.showFilterBTNs}
+                  timeout={{ enter: 450, exit: 350 }}
+                >
+                  <div className="box">
+                    <div className="innerBox">
+                      <button className="filterBtn">Standard Mob</button>
+                      <button className="filterBtn">Elite Mob</button>
+                    </div>
+                  </div>
+                </Zoom>
+              </div>
+              <div className="spacerV"></div>
+              <div id="innerLessSubCateDivContainer">
+                <Zoom
+                  in={this.state.showFilterBTNs}
+                  timeout={{ enter: 450, exit: 350 }}
+                >
+                  <button className="filterBtnCate">Logging</button>
+                </Zoom>
+                <Zoom
+                  in={this.state.showFilterBTNs}
+                  timeout={{ enter: 450, exit: 350 }}
+                >
+                  <div className="box">
+                    <div className="innerBox">
+                      <button className="filterBtn">Iron Wood</button>
+                      <button className="filterBtn">Wyrd Wood</button>
+                    </div>
+                  </div>
+                </Zoom>
+              </div>
+            </div>
+
             <div className="spacer"></div>
             <Zoom
               in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
-            >
-              <button className="filterBtnCate">Mobs</button>
-            </Zoom>
-            <Zoom in={this.state.showFilterBTNs}>
-              <div className="box">
-                <button className="filterBtn">Standard Mob</button>
-                <button className="filterBtn">Elite Mob</button>
-              </div>
-            </Zoom>
-            <div className="spacer"></div>
-            <Zoom
-              in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
+              timeout={{ enter: 500, exit: 300 }}
             >
               <button className="filterBtnCate">Mining</button>
             </Zoom>
-            <Zoom in={this.state.showFilterBTNs}>
+            <Zoom
+              in={this.state.showFilterBTNs}
+              timeout={{ enter: 500, exit: 300 }}
+            >
               <div className="box">
-                <button className="filterBtn">1</button>
-                <button className="filterBtn">2</button>
-                <button className="filterBtn">3</button>
-                <button className="filterBtn">4</button>
-                <button className="filterBtn">5</button>
-                <button className="filterBtn">6</button>
-                <button className="filterBtn">7</button>
-                <button className="filterBtn">8</button>
-                <button className="filterBtn">9</button>
-                <button className="filterBtn">10</button>
-                <button className="filterBtn">11</button>
-                <button className="filterBtn">12</button>
-                <button className="filterBtn">13</button>
-                <button className="filterBtn">14</button>
-                <button className="filterBtn">15</button>
-                <button className="filterBtn">16</button>
+                <div className="innerBox">
+                  <button className="filterBtn">1</button>
+                  <button className="filterBtn">2</button>
+                  <button className="filterBtn">3</button>
+                  <button className="filterBtn">4</button>
+                  <button className="filterBtn">5</button>
+                  <button className="filterBtn">6</button>
+                  <button className="filterBtn">7</button>
+                  <button className="filterBtn">8</button>
+                </div>
+                <div className="innerBox">
+                  <button className="filterBtn">9</button>
+                  <button className="filterBtn">10</button>
+                  <button className="filterBtn">11</button>
+                  <button className="filterBtn">12</button>
+                  <button className="filterBtn">13</button>
+                  <button className="filterBtn">14</button>
+                  <button className="filterBtn">15</button>
+                  <button className="filterBtn">16</button>
+                </div>
               </div>
             </Zoom>
             <div className="spacer"></div>
             <Zoom
               in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
+              timeout={{ enter: 550, exit: 250 }}
             >
               <button className="filterBtnCate">Harvesting</button>
             </Zoom>
-            <Zoom in={this.state.showFilterBTNs}>
+            <Zoom
+              in={this.state.showFilterBTNs}
+              timeout={{ enter: 550, exit: 250 }}
+            >
               <div className="box">
-                <button className="filterBtn">1</button>
-                <button className="filterBtn">2</button>
-                <button className="filterBtn">3</button>
-                <button className="filterBtn">4</button>
-                <button className="filterBtn">5</button>
-                <button className="filterBtn">6</button>
-                <button className="filterBtn">7</button>
-                <button className="filterBtn">8</button>
-                <button className="filterBtn">9</button>
-                <button className="filterBtn">10</button>
-                <button className="filterBtn">11</button>
-                <button className="filterBtn">12</button>
-                <button className="filterBtn">13</button>
-                <button className="filterBtn">14</button>
-                <button className="filterBtn">15</button>
-                <button className="filterBtn">16</button>
-                <button className="filterBtn">17</button>
+                <div className="innerBox">
+                  <button className="filterBtn">1</button>
+                  <button className="filterBtn">2</button>
+                  <button className="filterBtn">3</button>
+                  <button className="filterBtn">4</button>
+                  <button className="filterBtn">5</button>
+                  <button className="filterBtn">6</button>
+                  <button className="filterBtn">7</button>
+                  <button className="filterBtn">8</button>
+                </div>
+                <div className="innerBox">
+                  <button className="filterBtn">9</button>
+                  <button className="filterBtn">10</button>
+                  <button className="filterBtn">11</button>
+                  <button className="filterBtn">12</button>
+                  <button className="filterBtn">13</button>
+                  <button className="filterBtn">14</button>
+                  <button className="filterBtn">15</button>
+                  <button className="filterBtn">16</button>
+                  <button className="filterBtn">17</button>
+                </div>
               </div>
             </Zoom>
             <div className="spacer"></div>
             <Zoom
               in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
+              timeout={{ enter: 600, exit: 200 }}
             >
               <button className="filterBtnCate">Fungi</button>
             </Zoom>
-            <Zoom in={this.state.showFilterBTNs}>
+            <Zoom
+              in={this.state.showFilterBTNs}
+              timeout={{ enter: 600, exit: 200 }}
+            >
               <div className="box">
-                <button className="filterBtn">1</button>
-                <button className="filterBtn">2</button>
-                <button className="filterBtn">3</button>
-                <button className="filterBtn">4</button>
-                <button className="filterBtn">5</button>
-                <button className="filterBtn">6</button>
-                <button className="filterBtn">7</button>
-                <button className="filterBtn">8</button>
-                <button className="filterBtn">9</button>
-                <button className="filterBtn">10</button>
-                <button className="filterBtn">11</button>
-                <button className="filterBtn">12</button>
-                <button className="filterBtn">13</button>
-                <button className="filterBtn">14</button>
-                <button className="filterBtn">15</button>
-                <button className="filterBtn">16</button>
+                <div className="innerBox">
+                  <button className="filterBtn">Bumbleblossom</button>
+                  <button className="filterBtn">Capped Tanglewisp</button>
+                  <button className="filterBtn">Cascaded Gillflower</button>
+                  <button className="filterBtn">Corrupted Bloodspore</button>
+                  <button className="filterBtn">Flowering Tubecap</button>
+                  <button className="filterBtn">Fronded Petalcap</button>
+                </div>
+                <div className="innerBox">
+                  <button className="filterBtn">Slimy Twistcap</button>
+                  <button className="filterBtn">Spinecap</button>
+                  <button className="filterBtn">Suncreeper</button>
+                  <button className="filterBtn">Tanglewisp</button>
+                  <button className="filterBtn">Tendrilspine</button>
+                  <button className="filterBtn">Toadpot</button>
+                </div>
+                <div className="innerBox">
+                  <button className="filterBtn">Twisted Tubecap</button>
+                  <button className="filterBtn">Void Pitcher</button>
+                  <button className="filterBtn">Warm Platecap</button>
+                  <button className="filterBtn">Weeping Shellbed</button>
+                </div>
               </div>
             </Zoom>
             <div className="spacer"></div>
             <Zoom
               in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
+              timeout={{ enter: 650, exit: 150 }}
             >
               <button className="filterBtnCate">Tracking</button>
             </Zoom>
-            <Zoom in={this.state.showFilterBTNs}>
+            <Zoom
+              in={this.state.showFilterBTNs}
+              timeout={{ enter: 650, exit: 150 }}
+            >
               <div className="box">
-                <button className="filterBtn">Alligator</button>
-                <button className="filterBtn">Bear</button>
-                <button className="filterBtn">Bison</button>
-                <button className="filterBtn">Boar</button>
-                <button className="filterBtn">Bobcat</button>
-                <button className="filterBtn">Cow</button>
-                <button className="filterBtn">Elk</button>
-                <button className="filterBtn">Goat</button>
-                <button className="filterBtn">Lion</button>
-                <button className="filterBtn">Lynx</button>
-                <button className="filterBtn">Pig</button>
-                <button className="filterBtn">Rabbit</button>
-                <button className="filterBtn">Sheep</button>
-                <button className="filterBtn">Turkey</button>
-                <button className="filterBtn">Wolf</button>
-                <button className="filterBtn">Forest Elemental</button>
-                <button className="filterBtn">Mountain Elemental</button>
-                <button className="filterBtn">Tundra Elemental</button>
+                <div className="innerBox">
+                  <button className="filterBtn">Alligator</button>
+                  <button className="filterBtn">Bear</button>
+                  <button className="filterBtn">Bison</button>
+                  <button className="filterBtn">Boar</button>
+                  <button className="filterBtn">Bobcat</button>
+                  <button className="filterBtn">Cow</button>
+                  <button className="filterBtn">Elk</button>
+                  <button className="filterBtn">Goat</button>
+                </div>
+                <div className="innerBox">
+                  <button className="filterBtn">Lion</button>
+                  <button className="filterBtn">Lynx</button>
+                  <button className="filterBtn">Pig</button>
+                  <button className="filterBtn">Rabbit</button>
+                  <button className="filterBtn">Sheep</button>
+                  <button className="filterBtn">Turkey</button>
+                  <button className="filterBtn">Wolf</button>
+                </div>
+                <div className="innerBox">
+                  <button className="filterBtn">Forest Elemental</button>
+                  <button className="filterBtn">Mountain Elemental</button>
+                  <button className="filterBtn">Tundra Elemental</button>
+                </div>
               </div>
             </Zoom>
             <div className="spacer"></div>
             <Zoom
               in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
+              timeout={{ enter: 700, exit: 100 }}
             >
               <button className="filterBtnCate">Farming</button>
             </Zoom>
-            <Zoom in={this.state.showFilterBTNs}>
-              <div className="box">
-                <button className="filterBtn">1</button>
-                <button className="filterBtn">2</button>
-                <button className="filterBtn">3</button>
-                <button className="filterBtn">4</button>
-                <button className="filterBtn">5</button>
-                <button className="filterBtn">6</button>
-                <button className="filterBtn">7</button>
-                <button className="filterBtn">8</button>
-                <button className="filterBtn">9</button>
-                <button className="filterBtn">10</button>
-                <button className="filterBtn">11</button>
-                <button className="filterBtn">12</button>
-                <button className="filterBtn">13</button>
-                <button className="filterBtn">14</button>
-                <button className="filterBtn">15</button>
-                <button className="filterBtn">16</button>
-              </div>
-            </Zoom>
-            <div className="spacer"></div>
             <Zoom
               in={this.state.showFilterBTNs}
-              timeout={{ enter: 300, exit: 300 }}
+              timeout={{ enter: 700, exit: 100 }}
             >
-              <button className="filterBtnCate">Logging</button>
-            </Zoom>
-            <Zoom in={this.state.showFilterBTNs}>
               <div className="box">
-                <button className="filterBtn">1</button>
-                <button className="filterBtn">2</button>
+                <div className="innerBox">
+                  <button className="filterBtn">1</button>
+                  <button className="filterBtn">2</button>
+                  <button className="filterBtn">3</button>
+                  <button className="filterBtn">4</button>
+                  <button className="filterBtn">5</button>
+                  <button className="filterBtn">6</button>
+                  <button className="filterBtn">7</button>
+                  <button className="filterBtn">8</button>
+                </div>
+                <div className="innerBox">
+                  <button className="filterBtn">9</button>
+                  <button className="filterBtn">10</button>
+                  <button className="filterBtn">11</button>
+                  <button className="filterBtn">12</button>
+                  <button className="filterBtn">13</button>
+                  <button className="filterBtn">14</button>
+                  <button className="filterBtn">15</button>
+                  <button className="filterBtn">16</button>
+                </div>
               </div>
             </Zoom>
           </div>

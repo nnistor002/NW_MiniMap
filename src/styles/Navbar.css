@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   position: absolute;
+  justify-content: center;
+  flex-shrink: 1;
+  align-items: center;
   top: 4px;
   height: 98%;
   width: 98%;
@@ -13,17 +16,17 @@
 
 #nav_bar {
   display: flex;
-  position: relative;
+  position: absolute;
   top: 1px;
   text-align: center;
-  height: 50px;
+  height: auto;
   width: 60%;
   color: white;
   margin: auto;
   background-color: rgba(19, 19, 19, 0.776);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  border: 3px solid rgb(212, 158, 20);
+  border: 2px solid rgb(212, 158, 20);
 }
 
 #import_div {
@@ -43,6 +46,7 @@
   flex: 2;
   float: right;
   margin: auto;
+  padding: 5px;
 }
 
 #toggle_BTN {
@@ -63,24 +67,25 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-shrink: 1;
   align-items: center;
   margin: auto;
-  width: 95%;
-  height: 95%;
+  width: 99%;
+  height: auto;
   background-color: rgba(19, 19, 19, 0.776);
-  border: 3px solid rgb(212, 158, 20);
+  border: 2px solid rgb(212, 158, 20);
   border-radius: 10px;
   pointer-events: auto;
+  padding-top: 10px;
 }
 
 .filterBtnCate {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 250px;
-  height: 30px;
+  height: auto;
   border-radius: 5px;
   font-size: x-large;
   color: rgb(0, 0, 0);
@@ -96,7 +101,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: auto;
   height: auto;
   border-radius: 5px;
   font-size: medium;
@@ -113,16 +117,70 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  flex-direction: column;
+  width: 99%;
   height: auto;
   padding-top: 10px;
-  padding-bottom: 20px;
-  gap: 20px;
+  padding-bottom: 10px;
+  gap: 5px;
+}
+
+.innerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  height: auto;
+  gap: 5px;
+}
+
+.innerBox button {
+  height: 25px;
+  width: 250px;
 }
 
 .spacer {
   height: 5px;
   margin-bottom: 5px;
   width: 90%;
-  border-bottom: 3px dashed rgb(82, 65, 22);
+  border-bottom: 2px dashed rgb(150, 114, 24);
+}
+
+.spacerV {
+  height: 70px;
+  border-left: 2px dashed rgb(150, 114, 24);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#lessSubCateDivContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 80%;
+  margin: auto;
+}
+
+#innerLessSubCateDivContainer {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+}
+
+#innerBoxSpacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 80%;
+  text-align: center;
+}
+
+#noteTextInput {
+  width: 100%;
+  text-align: center;
 }
