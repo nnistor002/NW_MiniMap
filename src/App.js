@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
-//import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import Map from "./components/Map";
 import RingMenu from "./components/RingMenuEdit.jsx";
 
-//import welcomeImg from "./images/WelcomeScreen.png";
-//import loadingIconImg from "./images/loadingIcon.png";
+import welcomeImg from "./images/WelcomeScreen.png";
+// import loadingIconImg from "./images/loadingIcon.png";
 
 import { connect } from "react-redux";
-//import { Button } from "@mui/material";
+import { Button } from "@mui/material";
 
 class App extends Component {
   turnOffWelcomeDiv() {
@@ -51,18 +51,18 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // setTimeout(() => {
-    //   document.getElementById("divTitleUpload").style.visibility = "visible";
-    //   document.getElementById("file-upload").style.visibility = "visible";
-    //   document.getElementById("newBTN").style.visibility = "visible";
-    //   document.getElementById("loadingIcon").style.visibility = "hidden";
-    // }, 10000);
+    setTimeout(() => {
+      document.getElementById("divTitleUpload").style.visibility = "visible";
+      document.getElementById("file-upload").style.visibility = "visible";
+      document.getElementById("newBTN").style.visibility = "visible";
+      document.getElementById("loadingIcon").style.visibility = "hidden";
+    }, 10000);
   }
 
   render() {
     return (
       <div id="mainAppDiv">
-        {/* <div id="WelcomeDiv">
+        <div id="WelcomeDiv">
           <img id="imgWelcome" src={welcomeImg} alt="WelcomeImg" />
           <h2 id="divTitleUpload">Upload JSON File</h2>
           <input
@@ -76,10 +76,10 @@ class App extends Component {
           <Button id="newBTN" onClick={this.turnOffWelcomeDiv}>
             Start Fresh
           </Button>
-        </div> */}
+        </div>
         <Map />
         <RingMenu />
-        {/* <Navbar /> */}
+        <Navbar />
       </div>
     );
   }

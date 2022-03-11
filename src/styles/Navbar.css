@@ -1,15 +1,29 @@
+#navBarContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 4px;
+  height: 98%;
+  width: 98%;
+  margin: auto;
+  user-select: none;
+  pointer-events: none;
+  gap: 5px;
+}
+
 #nav_bar {
   display: flex;
-  position: absolute;
-  top: 3px;
+  position: relative;
+  top: 1px;
   text-align: center;
-  height: 35px;
-  width: 95%;
+  height: 50px;
+  width: 60%;
   color: white;
   margin: auto;
   background-color: rgba(19, 19, 19, 0.776);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border: 3px solid rgb(212, 158, 20);
 }
 
 #import_div {
@@ -32,12 +46,83 @@
 }
 
 #toggle_BTN {
-  width: 80%;
-  border: 2px solid rgb(0, 0, 0);
+  width: 50%;
   border-radius: 5px;
-  font-size: large;
+  font-size: larger;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  background-color: rgb(212, 158, 20);
+  pointer-events: auto;
 }
 
-button:hover {
-  background-color: rgb(255, 90, 90);
+#toggle_BTN:hover {
+  background-color: rgb(82, 65, 22);
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 1;
+  align-items: center;
+  margin: auto;
+  width: 95%;
+  height: 95%;
+  background-color: rgba(19, 19, 19, 0.776);
+  border: 3px solid rgb(212, 158, 20);
+  border-radius: 10px;
+  pointer-events: auto;
+}
+
+.filterBtnCate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  background-color: rgb(214, 177, 85);
+}
+.filterBtnCate:hover {
+  background-color: rgb(82, 65, 22);
+}
+
+.filterBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  font-size: medium;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  background-color: rgb(212, 158, 20);
+}
+
+.filterBtn:hover {
+  background-color: rgb(82, 65, 22);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  gap: 20px;
+}
+
+.spacer {
+  height: 5px;
+  margin-bottom: 5px;
+  width: 90%;
+  border-bottom: 3px dashed rgb(82, 65, 22);
 }
