@@ -141,24 +141,24 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">1</button>
-                  <button className="filterBtn">2</button>
-                  <button className="filterBtn">3</button>
-                  <button className="filterBtn">4</button>
-                  <button className="filterBtn">5</button>
-                  <button className="filterBtn">6</button>
-                  <button className="filterBtn">7</button>
-                  <button className="filterBtn">8</button>
+                  <button className="filterBtn">Blightcrag</button>
+                  <button className="filterBtn">Earthcarg</button>
+                  <button className="filterBtn">Gold</button>
+                  <button className="filterBtn">Iron</button>
+                  <button className="filterBtn">Lifecrag</button>
+                  <button className="filterBtn">Lodestone</button>
+                  <button className="filterBtn">Orichalcum</button>
+                  <button className="filterBtn">Platinum</button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">9</button>
-                  <button className="filterBtn">10</button>
-                  <button className="filterBtn">11</button>
-                  <button className="filterBtn">12</button>
-                  <button className="filterBtn">13</button>
-                  <button className="filterBtn">14</button>
-                  <button className="filterBtn">15</button>
-                  <button className="filterBtn">16</button>
+                  <button className="filterBtn">Saltpeter</button>
+                  <button className="filterBtn">Scorchstone</button>
+                  <button className="filterBtn">Seepingstone</button>
+                  <button className="filterBtn">Shockspire</button>
+                  <button className="filterBtn">Silver</button>
+                  <button className="filterBtn">Soulspire</button>
+                  <button className="filterBtn">Springstone</button>
+                  <button className="filterBtn">Starmetal</button>
                 </div>
               </div>
             </Zoom>
@@ -175,25 +175,25 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">1</button>
-                  <button className="filterBtn">2</button>
-                  <button className="filterBtn">3</button>
-                  <button className="filterBtn">4</button>
-                  <button className="filterBtn">5</button>
-                  <button className="filterBtn">6</button>
-                  <button className="filterBtn">7</button>
-                  <button className="filterBtn">8</button>
+                  <button className="filterBtn">Blightmoth</button>
+                  <button className="filterBtn">Blightroot</button>
+                  <button className="filterBtn">Dragonglory</button>
+                  <button className="filterBtn">Earthshell Turtle</button>
+                  <button className="filterBtn">Earthspine</button>
+                  <button className="filterBtn">Floating Spinefish</button>
+                  <button className="filterBtn">Hemp</button>
+                  <button className="filterBtn">Lifebloom</button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">9</button>
-                  <button className="filterBtn">10</button>
-                  <button className="filterBtn">11</button>
-                  <button className="filterBtn">12</button>
-                  <button className="filterBtn">13</button>
-                  <button className="filterBtn">14</button>
-                  <button className="filterBtn">15</button>
-                  <button className="filterBtn">16</button>
-                  <button className="filterBtn">17</button>
+                  <button className="filterBtn">Lifemoth</button>
+                  <button className="filterBtn">Lightning Beetle</button>
+                  <button className="filterBtn">Rivercress</button>
+                  <button className="filterBtn">Salamander Snail</button>
+                  <button className="filterBtn">Shockblub</button>
+                  <button className="filterBtn">Silkweed</button>
+                  <button className="filterBtn">Soulspire</button>
+                  <button className="filterBtn">Soulwyrm</button>
+                  <button className="filterBtn">Wirefiber</button>
                 </div>
               </div>
             </Zoom>
@@ -284,24 +284,24 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">1</button>
-                  <button className="filterBtn">2</button>
-                  <button className="filterBtn">3</button>
-                  <button className="filterBtn">4</button>
-                  <button className="filterBtn">5</button>
-                  <button className="filterBtn">6</button>
-                  <button className="filterBtn">7</button>
-                  <button className="filterBtn">8</button>
+                  <button className="filterBtn">Barly</button>
+                  <button className="filterBtn">Berry</button>
+                  <button className="filterBtn">Blueberry</button>
+                  <button className="filterBtn">Broccoli</button>
+                  <button className="filterBtn">Cabbage</button>
+                  <button className="filterBtn">Carrot</button>
+                  <button className="filterBtn">Corn</button>
+                  <button className="filterBtn">Cranberry</button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">9</button>
-                  <button className="filterBtn">10</button>
-                  <button className="filterBtn">11</button>
-                  <button className="filterBtn">12</button>
-                  <button className="filterBtn">13</button>
-                  <button className="filterBtn">14</button>
-                  <button className="filterBtn">15</button>
-                  <button className="filterBtn">16</button>
+                  <button className="filterBtn">Herbs</button>
+                  <button className="filterBtn">Honey</button>
+                  <button className="filterBtn">Melon</button>
+                  <button className="filterBtn">Nuts</button>
+                  <button className="filterBtn">Potato</button>
+                  <button className="filterBtn">Squash</button>
+                  <button className="filterBtn">Strawberry</button>
+                  <button className="filterBtn">Wheat</button>
                 </div>
               </div>
             </Zoom>
