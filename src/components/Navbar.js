@@ -45,6 +45,32 @@ class Navbar extends React.Component {
     });
   };
 
+  filterHighlight = (idTargetFilter) => {
+    this.filterClear();
+
+    var listOfIconDivs = document.getElementsByClassName("iconDiv");
+
+    for (let x = 0; x < listOfIconDivs.length; x++) {
+      var id = listOfIconDivs[x].id;
+      if (id.includes(idTargetFilter)) {
+        document.getElementById(id).style.boxShadow = "red 0px 0px 20px 10px";
+      }
+    }
+
+    this.showFilters();
+  };
+
+  filterClear = () => {
+    var listOfIconDivs = document.getElementsByClassName("iconDiv");
+
+    for (let x = 0; x < listOfIconDivs.length; x++) {
+      document.getElementById(listOfIconDivs[x].id).style.boxShadow =
+        "rgba(214, 176, 79, 0.8) 0px 0px 20px 10px";
+    }
+
+    this.showFilters();
+  };
+
   render() {
     return (
       <div id="navBarContainer">
@@ -58,16 +84,18 @@ class Navbar extends React.Component {
 
         <Zoom
           in={this.state.showFilterBTNs}
-          timeout={{ enter: 100, exit: 500 }}
+          timeout={{ enter: 100, exit: 400 }}
         >
           <div id="mainContainer">
             <div id="lessSubCateDivContainer">
               <div id="innerLessSubCateDivContainer">
                 <Zoom
                   in={this.state.showFilterBTNs}
-                  timeout={{ enter: 400, exit: 500 }}
+                  timeout={{ enter: 400, exit: 400 }}
                 >
-                  <button className="filterBtnCate">Notes</button>
+                  <button className="filterBtnCate" onClick={this.filterClear}>
+                    Notes
+                  </button>
                 </Zoom>
 
                 <Zoom
@@ -120,8 +148,22 @@ class Navbar extends React.Component {
                 >
                   <div className="box">
                     <div className="innerBox">
-                      <button className="filterBtn">Iron Wood</button>
-                      <button className="filterBtn">Wyrd Wood</button>
+                      <button
+                        className="filterBtn"
+                        onClick={() => {
+                          this.filterHighlight("IronWood");
+                        }}
+                      >
+                        Iron Wood
+                      </button>
+                      <button
+                        className="filterBtn"
+                        onClick={() => {
+                          this.filterHighlight("WyrdWood");
+                        }}
+                      >
+                        Wyrd Wood
+                      </button>
                     </div>
                   </div>
                 </Zoom>
