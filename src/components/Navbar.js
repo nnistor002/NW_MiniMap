@@ -12,31 +12,9 @@ class Navbar extends React.Component {
       x: 2000,
       y: 2000,
       showFilterBTNs: false,
+      filterForId: "",
     };
-    // this.testSpawnIcon = this.testSpawnIcon.bind(this);
   }
-
-  // testSpawnIcon() {
-  //   let overlayContainer = document.getElementById("overLayDiv");
-  //   let oldX = this.state.x;
-  //   let oldY = this.state.y;
-  //   let oldnumb = this.state.numb;
-
-  //   let newDiv = document.createElement("div");
-  //   newDiv.id = "testIcon" + oldnumb;
-  //   newDiv.className = "iconDiv";
-  //   newDiv.style.top = oldX + "px";
-  //   newDiv.style.left = oldY + "px";
-  //   newDiv.style.backgroundColor = "blue";
-
-  //   this.setState({
-  //     x: oldX + 200,
-  //     y: oldY + 200,
-  //     numb: oldnumb + 1,
-  //   });
-
-  //   overlayContainer.appendChild(newDiv);
-  // }
 
   showFilters = () => {
     let state = this.state.showFilterBTNs;
@@ -45,7 +23,7 @@ class Navbar extends React.Component {
     });
   };
 
-  filterHighlight = (idTargetFilter) => {
+  filterHighlightSubCate = (idTargetFilter) => {
     this.filterClear();
 
     var listOfIconDivs = document.getElementsByClassName("iconDiv");
@@ -55,7 +33,33 @@ class Navbar extends React.Component {
       if (id.includes(idTargetFilter)) {
         document.getElementById(id).style.boxShadow = "red 0px 0px 20px 10px";
       }
+      this.setState({
+        filterForId: idTargetFilter,
+      });
     }
+
+    document.getElementById("filterForDetails").style.visibility = "visible";
+
+    this.showFilters();
+  };
+
+  filterHighlightGeneralCate = (cate) => {
+    this.filterClear();
+
+    var listOfIconDivs = document.getElementsByClassName("iconDiv");
+
+    for (let x = 0; x < listOfIconDivs.length; x++) {
+      var id = listOfIconDivs[x].id;
+      if (listOfIconDivs[x].getAttribute("data-category") === cate) {
+        document.getElementById(id).style.boxShadow = "red 0px 0px 20px 10px";
+      }
+    }
+
+    this.setState({
+      filterForId: cate,
+    });
+
+    document.getElementById("filterForDetails").style.visibility = "visible";
 
     this.showFilters();
   };
@@ -68,7 +72,11 @@ class Navbar extends React.Component {
         "rgba(214, 176, 79, 0.8) 0px 0px 20px 10px";
     }
 
-    this.showFilters();
+    this.setState({
+      filterForId: "",
+    });
+
+    document.getElementById("filterForDetails").style.visibility = "hidden";
   };
 
   render() {
@@ -78,6 +86,16 @@ class Navbar extends React.Component {
           <div id="toggle_div">
             <button id="toggle_BTN" onClick={this.showFilters}>
               ----------- Toggle Filter Menu -----------
+            </button>
+          </div>
+        </div>
+        <div id="filteringForDiv">
+          <div id="filterForDetails">
+            {" Find - "}
+            <span id="targetFilterIdSlot">{this.state.filterForId}</span>{" "}
+            {" -  "}
+            <button id="clearFilterBtn" onClick={this.filterClear}>
+              Clear Filter
             </button>
           </div>
         </div>
@@ -93,9 +111,7 @@ class Navbar extends React.Component {
                   in={this.state.showFilterBTNs}
                   timeout={{ enter: 400, exit: 400 }}
                 >
-                  <button className="filterBtnCate" onClick={this.filterClear}>
-                    Notes
-                  </button>
+                  <button className="filterBtnCate">Notes</button>
                 </Zoom>
 
                 <Zoom
@@ -140,7 +156,14 @@ class Navbar extends React.Component {
                   in={this.state.showFilterBTNs}
                   timeout={{ enter: 450, exit: 350 }}
                 >
-                  <button className="filterBtnCate">Logging</button>
+                  <button
+                    className="filterBtnCate"
+                    onClick={() => {
+                      this.filterHighlightGeneralCate("Logging");
+                    }}
+                  >
+                    Logging
+                  </button>
                 </Zoom>
                 <Zoom
                   in={this.state.showFilterBTNs}
@@ -151,7 +174,7 @@ class Navbar extends React.Component {
                       <button
                         className="filterBtn"
                         onClick={() => {
-                          this.filterHighlight("IronWood");
+                          this.filterHighlightSubCate("IronWood");
                         }}
                       >
                         Iron Wood
@@ -159,7 +182,7 @@ class Navbar extends React.Component {
                       <button
                         className="filterBtn"
                         onClick={() => {
-                          this.filterHighlight("WyrdWood");
+                          this.filterHighlightSubCate("WyrdWood");
                         }}
                       >
                         Wyrd Wood
