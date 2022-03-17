@@ -149,7 +149,6 @@ class Map extends React.Component {
             onChange={(value) => this.setState({ value })}
             minScale={0.2}
             maxScale={1}
-            translationBounds={this.state.translationBounds}
           >
             {/* This is where the div icons will be placed */}
             <div

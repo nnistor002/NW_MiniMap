@@ -43,6 +43,10 @@ class NotePinBtnClass extends React.Component {
 
   toggleMainBTN = () => {
     this.props.mainButtonActions("showMainNotePinBTN");
+
+    this.setState({
+      noteUserInput: "",
+    });
   };
 
   render() {
@@ -61,7 +65,19 @@ class NotePinBtnClass extends React.Component {
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
           <div id="notePinSubDiv">
-            <form>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                //ID, TITLE, CATEGORY
+                var input = this.state.noteUserInput;
+
+                this.sub_CateLogicBTN(
+                  "Note_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                  "Note : " + input,
+                  "Notes"
+                );
+              }}
+            >
               <label>
                 Details
                 <input
@@ -71,24 +87,6 @@ class NotePinBtnClass extends React.Component {
                   onChange={this.handleNoteUserInput}
                 />
               </label>
-              <div
-                id="notePinSubDivSubmitBTN"
-                onClick={() => {
-                  //ID, TITLE, CATEGORY
-                  var input = this.state.noteUserInput;
-
-                  this.sub_CateLogicBTN(
-                    "Note_" +
-                      this.props.trackXY[0] +
-                      "-" +
-                      this.props.trackXY[1],
-                    "Note : " + input,
-                    "Notes"
-                  );
-                }}
-              >
-                Submit
-              </div>
             </form>
           </div>
         </Zoom>

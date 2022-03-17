@@ -7,7 +7,9 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1600,
     height: 900,
-    resizable: false,
+    minWidth: 1600,
+    minHeight: 900,
+    fullscreenable: true,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
     },
@@ -15,6 +17,7 @@ function createWindow() {
 
   // and load the index.html of the app.
   mainWindow.loadURL("http://localhost:3000");
+  mainWindow.setMenu(null);
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

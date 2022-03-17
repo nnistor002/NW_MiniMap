@@ -31,6 +31,7 @@
 
 #full_Map {
   margin: auto;
+  overflow: hidden;
 }
 
 #overLayDiv {

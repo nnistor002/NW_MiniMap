@@ -60,7 +60,9 @@ class RingMenuEdit extends React.Component {
   }
 
   handleMiddleClickMenu(e) {
-    if (e.button === 1) {
+    var welcomeScreenVisible =
+      document.getElementById("WelcomeDiv").style.visibility;
+    if (e.button === 1 && welcomeScreenVisible === "hidden") {
       let z = document.getElementById("rightClickMenuContainer");
 
       // let mapOffSetX = e.offsetX;
@@ -86,6 +88,10 @@ class RingMenuEdit extends React.Component {
           showMainLoggingBTN: true,
         },
       });
+
+      if (window.innerWidth < 1900) {
+        z.style.transform = "scale(.8)";
+      }
     }
   }
 

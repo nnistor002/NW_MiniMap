@@ -43,6 +43,10 @@ class MobBtnClass extends React.Component {
 
   toggleMainBTN = () => {
     this.props.mainButtonActions("showMainMobsBTN");
+
+    this.setState({
+      inputName: "",
+    });
   };
 
   render() {
@@ -76,7 +80,7 @@ class MobBtnClass extends React.Component {
               );
             }}
           >
-            Mob
+            Standard Mob
           </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
@@ -95,13 +99,13 @@ class MobBtnClass extends React.Component {
               );
             }}
           >
-            Elite
+            Elite Mob
           </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
           <input
             id="mobSubDivInput"
-            placeholder="Input Name..."
+            placeholder="Input Name then click Mob Type..."
             type="text"
             value={this.state.inputName}
             onChange={this.handleMobDivInput}

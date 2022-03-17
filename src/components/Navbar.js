@@ -51,6 +51,27 @@ class Navbar extends React.Component {
   };
 
   filterHighlightGeneralCate = (cate) => {
+    this.filterClear();
+
+    var listOfIconDivs1 = document.getElementsByClassName("iconDiv");
+
+    for (let x = 0; x < listOfIconDivs1.length; x++) {
+      var id1 = listOfIconDivs1[x].id;
+      if (listOfIconDivs1[x].getAttribute("data-category") === cate) {
+        document.getElementById(id1).style.boxShadow = "red 0px 0px 20px 10px";
+      }
+    }
+
+    this.setState({
+      filterForId: cate,
+    });
+
+    document.getElementById("filterForDetails").style.visibility = "visible";
+
+    this.showFilters();
+  };
+
+  filterHighlightGeneralCateForNoteInput = (cate) => {
     if (cate === "Notes" && this.state.noteInput !== "") {
       this.filterClear();
 
@@ -68,29 +89,11 @@ class Navbar extends React.Component {
         }
       }
 
+      var inputholder = this.state.noteInput;
+
       this.setState({
-        filterForId: cate,
+        filterForId: " Note keyword:  ' " + inputholder + " ' ",
         noteInput: "",
-      });
-
-      document.getElementById("filterForDetails").style.visibility = "visible";
-
-      this.showFilters();
-    } else {
-      this.filterClear();
-
-      var listOfIconDivs1 = document.getElementsByClassName("iconDiv");
-
-      for (let x = 0; x < listOfIconDivs1.length; x++) {
-        var id1 = listOfIconDivs1[x].id;
-        if (listOfIconDivs1[x].getAttribute("data-category") === cate) {
-          document.getElementById(id1).style.boxShadow =
-            "red 0px 0px 20px 10px";
-        }
-      }
-
-      this.setState({
-        filterForId: cate,
       });
 
       document.getElementById("filterForDetails").style.visibility = "visible";
@@ -162,13 +165,20 @@ class Navbar extends React.Component {
                 >
                   <div className="box">
                     <div id="innerBoxSpacer">
-                      <input
-                        id="noteTextInput"
-                        type="text"
-                        placeholder="Input a keyword to look for..."
-                        value={this.state.noteInput}
-                        onChange={this.handleNoteUserInput}
-                      />
+                      <form
+                        onSubmit={(e) => {
+                          e.preventDefault();
+                          this.filterHighlightGeneralCateForNoteInput("Notes");
+                        }}
+                      >
+                        <input
+                          id="noteTextInput"
+                          type="text"
+                          placeholder="Input a keyword to look for..."
+                          value={this.state.noteInput}
+                          onChange={this.handleNoteUserInput}
+                        />
+                      </form>
                     </div>
                   </div>
                 </Zoom>
