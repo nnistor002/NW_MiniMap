@@ -12,6 +12,23 @@ class FarmingBtnClass extends React.Component {
     this.state = {};
   }
 
+  sub_CateLogicBTN = (id, t, c) => {
+    /*id = ID --- t = TITLE --- c = CATEGORY */
+
+    let newPin = document.createElement("img", {});
+    newPin.src = farming;
+    newPin.id = id;
+    newPin.className = "iconDiv";
+    newPin.style.left = this.props.trackXY[0] - 15 + "px";
+    newPin.style.top = this.props.trackXY[1] - 15 + "px";
+    newPin.title = t;
+    newPin.dataset.category = c;
+
+    document.getElementById("overLayDiv").appendChild(newPin);
+
+    this.props.subButtonCloseAction();
+  };
+
   toggleMainBTN = () => {
     this.props.mainButtonActions("showMainFarmingBTN");
   };
@@ -39,52 +56,259 @@ class FarmingBtnClass extends React.Component {
         </Zoom>
 
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionBarley">Barley</div>
+          <div
+            id="farmingSubDivOptionBarley"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Barley_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Barley",
+                "Farming"
+              );
+            }}
+          >
+            Barley
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionBerry">Berry</div>
+          <div
+            id="farmingSubDivOptionBerry"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Berry_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Berry",
+                "Farming"
+              );
+            }}
+          >
+            Berry
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionBlueberry">Blueberry</div>
+          <div
+            id="farmingSubDivOptionBlueberry"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Blueberry_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Blueberry",
+                "Farming"
+              );
+            }}
+          >
+            Blueberry
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionBroccoli">Broccoli</div>
+          <div
+            id="farmingSubDivOptionBroccoli"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Broccoli_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Broccoli",
+                "Farming"
+              );
+            }}
+          >
+            Broccoli
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionCabbage">Cabbage</div>
+          <div
+            id="farmingSubDivOptionCabbage"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Cabbage_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Cabbage",
+                "Farming"
+              );
+            }}
+          >
+            Cabbage
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionCarrot">Carrot</div>
+          <div
+            id="farmingSubDivOptionCarrot"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Carrot_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Carrot",
+                "Farming"
+              );
+            }}
+          >
+            Carrot
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionCorn">Corn</div>
+          <div
+            id="farmingSubDivOptionCorn"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Corn_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Corn",
+                "Farming"
+              );
+            }}
+          >
+            Corn
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionCranberries">Cranberries</div>
+          <div
+            id="farmingSubDivOptionCranberries"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Cranberries_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Cranberries",
+                "Farming"
+              );
+            }}
+          >
+            Cranberries
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionHerbs">Herbs</div>
+          <div
+            id="farmingSubDivOptionHerbs"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Herbs_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Herbs",
+                "Farming"
+              );
+            }}
+          >
+            Herbs
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionHoney">Honey</div>
+          <div
+            id="farmingSubDivOptionHoney"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Honey_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Honey",
+                "Farming"
+              );
+            }}
+          >
+            Honey
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionMelon">Melon</div>
+          <div
+            id="farmingSubDivOptionMelon"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Melon_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Melon",
+                "Farming"
+              );
+            }}
+          >
+            Melon
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionNuts">Nuts</div>
+          <div
+            id="farmingSubDivOptionNuts"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Nuts_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Nuts",
+                "Farming"
+              );
+            }}
+          >
+            Nuts
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionPotato">Potato</div>
+          <div
+            id="farmingSubDivOptionPotato"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Potato_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Potato",
+                "Farming"
+              );
+            }}
+          >
+            Potato
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionSquash">Squash</div>
+          <div
+            id="farmingSubDivOptionSquash"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Squash_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Squash",
+                "Farming"
+              );
+            }}
+          >
+            Squash
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionStrawberry">Strawberry</div>
+          <div
+            id="farmingSubDivOptionStrawberry"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Strawberry_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Strawberry",
+                "Farming"
+              );
+            }}
+          >
+            Strawberry
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="farmingSubDivOptionWheat">Wheat</div>
+          <div
+            id="farmingSubDivOptionWheat"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Wheat_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Wheat",
+                "Farming"
+              );
+            }}
+          >
+            Wheat
+          </div>
         </Zoom>
       </div>
     );

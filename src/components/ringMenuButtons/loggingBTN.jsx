@@ -12,7 +12,7 @@ class LoggingBtnClass extends React.Component {
     this.state = { clickAction: this.props.clickAction };
   }
 
-  sub_IronWoodBTN = (id, t, c) => {
+  sub_CateLogicBTN = (id, t, c) => {
     /*id = ID --- t = TITLE --- c = CATEGORY */
 
     let newPin = document.createElement("img", {});
@@ -52,7 +52,7 @@ class LoggingBtnClass extends React.Component {
             id="loggingSubCatDivWyrdwood"
             onClick={() => {
               //ID, TITLE, CATEGORY
-              this.sub_IronWoodBTN(
+              this.sub_CateLogicBTN(
                 "WyrdWood_" +
                   this.props.trackXY[0] +
                   "-" +
@@ -70,7 +70,7 @@ class LoggingBtnClass extends React.Component {
             id="loggingSubCatDivIronwood"
             onClick={() => {
               //ID, TITLE, CATEGORY
-              this.sub_IronWoodBTN(
+              this.sub_CateLogicBTN(
                 "IronWood_" +
                   this.props.trackXY[0] +
                   "-" +

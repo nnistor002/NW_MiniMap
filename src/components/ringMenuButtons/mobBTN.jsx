@@ -9,8 +9,37 @@ import mobs from "../../images/menuIcons/Mobs.png";
 class MobBtnClass extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { inputName: "" };
   }
+
+  sub_CateLogicBTN = (id, t, c) => {
+    /*id = ID --- t = TITLE --- c = CATEGORY */
+
+    if (this.state.inputName !== "") {
+      let newPin = document.createElement("img", {});
+      newPin.src = mobs;
+      newPin.id = id;
+      newPin.className = "iconDiv";
+      newPin.style.left = this.props.trackXY[0] - 15 + "px";
+      newPin.style.top = this.props.trackXY[1] - 15 + "px";
+      newPin.title = t;
+      newPin.dataset.category = c;
+
+      document.getElementById("overLayDiv").appendChild(newPin);
+
+      this.setState({
+        inputName: "",
+      });
+
+      this.props.subButtonCloseAction();
+    }
+  };
+
+  handleMobDivInput = (e) => {
+    this.setState({
+      inputName: e.target.value,
+    });
+  };
 
   toggleMainBTN = () => {
     this.props.mainButtonActions("showMainMobsBTN");
@@ -31,17 +60,50 @@ class MobBtnClass extends React.Component {
           </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="mobSubDivOption1">Mob</div>
+          <div
+            id="mobSubDivOption1"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              var mobName = this.state.inputName;
+
+              this.sub_CateLogicBTN(
+                "MobStandard_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Standard Mob - " + mobName,
+                "Mobs"
+              );
+            }}
+          >
+            Mob
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="mobSubDivOption2">Elite</div>
+          <div
+            id="mobSubDivOption2"
+            onClick={() => {
+              var mobName = this.state.inputName;
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "MobElite_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Elite Mob - " + mobName,
+                "Mobs"
+              );
+            }}
+          >
+            Elite
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
           <input
             id="mobSubDivInput"
             placeholder="Input Name..."
             type="text"
-            value={this.state.mobSubDivInput}
+            value={this.state.inputName}
             onChange={this.handleMobDivInput}
           />
         </Zoom>

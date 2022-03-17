@@ -12,6 +12,23 @@ class TrackingBtnClass extends React.Component {
     this.state = {};
   }
 
+  sub_CateLogicBTN = (id, t, c) => {
+    /*id = ID --- t = TITLE --- c = CATEGORY */
+
+    let newPin = document.createElement("img", {});
+    newPin.src = animal;
+    newPin.id = id;
+    newPin.className = "iconDiv";
+    newPin.style.left = this.props.trackXY[0] - 15 + "px";
+    newPin.style.top = this.props.trackXY[1] - 15 + "px";
+    newPin.title = t;
+    newPin.dataset.category = c;
+
+    document.getElementById("overLayDiv").appendChild(newPin);
+
+    this.props.subButtonCloseAction();
+  };
+
   toggleMainBTN = () => {
     this.props.mainButtonActions("showMainTrackingBTN");
   };
@@ -31,58 +48,286 @@ class TrackingBtnClass extends React.Component {
           </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionAlligator">Alligator</div>
+          <div
+            id="trackingSubDivOptionAlligator"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Alligator_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Alligator",
+                "Tracking"
+              );
+            }}
+          >
+            Alligator
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionBear">Bear</div>
+          <div
+            id="trackingSubDivOptionBear"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Bear_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Bear",
+                "Tracking"
+              );
+            }}
+          >
+            Bear
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionBison">Bison</div>
+          <div
+            id="trackingSubDivOptionBison"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Bison_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Bison",
+                "Tracking"
+              );
+            }}
+          >
+            Bison
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionBoar">Boar</div>
+          <div
+            id="trackingSubDivOptionBoar"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Boar_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Boar",
+                "Tracking"
+              );
+            }}
+          >
+            Boar
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionBobcat">Bobcat</div>
+          <div
+            id="trackingSubDivOptionBobcat"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Bobcat_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Bobcat",
+                "Tracking"
+              );
+            }}
+          >
+            Bobcat
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionCow">Cow</div>
+          <div
+            id="trackingSubDivOptionCow"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Cow_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Cow",
+                "Tracking"
+              );
+            }}
+          >
+            Cow
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionElk">Elk</div>
+          <div
+            id="trackingSubDivOptionElk"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Elk_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Elk",
+                "Tracking"
+              );
+            }}
+          >
+            Elk
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionGoat">Goat</div>
+          <div
+            id="trackingSubDivOptionGoat"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Goat_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Goat",
+                "Tracking"
+              );
+            }}
+          >
+            Goat
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionLion">Lion</div>
+          <div
+            id="trackingSubDivOptionLion"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Lion_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Lion",
+                "Tracking"
+              );
+            }}
+          >
+            Lion
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionLynx">Lynx</div>
+          <div
+            id="trackingSubDivOptionLynx"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Lynx_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Lynx",
+                "Tracking"
+              );
+            }}
+          >
+            Lynx
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionPig">Pig</div>
+          <div
+            id="trackingSubDivOptionPig"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Pig_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Pig",
+                "Tracking"
+              );
+            }}
+          >
+            Pig
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionRabbit">Rabbit</div>
+          <div
+            id="trackingSubDivOptionRabbit"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Rabbit_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Rabbit",
+                "Tracking"
+              );
+            }}
+          >
+            Rabbit
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionSheep">Sheep</div>
+          <div
+            id="trackingSubDivOptionSheep"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Sheep_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Sheep",
+                "Tracking"
+              );
+            }}
+          >
+            Sheep
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionTurkey">Turkey</div>
+          <div
+            id="trackingSubDivOptionTurkey"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Turkey_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Turkey",
+                "Tracking"
+              );
+            }}
+          >
+            Turkey
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionWolf">Wolf</div>
+          <div
+            id="trackingSubDivOptionWolf"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "Wolf_" + this.props.trackXY[0] + "-" + this.props.trackXY[1],
+                "Wolf",
+                "Tracking"
+              );
+            }}
+          >
+            Wolf
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionForestE">Forest Elemental</div>
+          <div
+            id="trackingSubDivOptionForestE"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "ForestElemental_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Forest Elemental",
+                "Tracking"
+              );
+            }}
+          >
+            Forest Elemental
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionMountainE">Mountain Elemental</div>
+          <div
+            id="trackingSubDivOptionMountainE"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "MountainElemental_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Mountain Elemental",
+                "Tracking"
+              );
+            }}
+          >
+            Mountain Elemental
+          </div>
         </Zoom>
         <Zoom in={this.props.showSubs} timeout={{ enter: 200, exit: 200 }}>
-          <div id="trackingSubDivOptionTundraE">Tundra Elemental</div>
+          <div
+            id="trackingSubDivOptionTundraE"
+            onClick={() => {
+              //ID, TITLE, CATEGORY
+              this.sub_CateLogicBTN(
+                "TundraElemental_" +
+                  this.props.trackXY[0] +
+                  "-" +
+                  this.props.trackXY[1],
+                "Tundra Elemental",
+                "Tracking"
+              );
+            }}
+          >
+            Tundra Elemental
+          </div>
         </Zoom>
       </div>
     );

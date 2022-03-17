@@ -13,8 +13,15 @@ class Navbar extends React.Component {
       y: 2000,
       showFilterBTNs: false,
       filterForId: "",
+      noteInput: "",
     };
   }
+
+  handleNoteUserInput = (e) => {
+    this.setState({
+      noteInput: e.target.value,
+    });
+  };
 
   showFilters = () => {
     let state = this.state.showFilterBTNs;
@@ -44,24 +51,52 @@ class Navbar extends React.Component {
   };
 
   filterHighlightGeneralCate = (cate) => {
-    this.filterClear();
+    if (cate === "Notes" && this.state.noteInput !== "") {
+      this.filterClear();
 
-    var listOfIconDivs = document.getElementsByClassName("iconDiv");
+      var listOfIconDivs0 = document.getElementsByClassName("iconDiv");
 
-    for (let x = 0; x < listOfIconDivs.length; x++) {
-      var id = listOfIconDivs[x].id;
-      if (listOfIconDivs[x].getAttribute("data-category") === cate) {
-        document.getElementById(id).style.boxShadow = "red 0px 0px 20px 10px";
+      for (let x = 0; x < listOfIconDivs0.length; x++) {
+        var id0 = listOfIconDivs0[x].id;
+        var noteTitle = listOfIconDivs0[x].title.toLowerCase();
+        if (
+          listOfIconDivs0[x].getAttribute("data-category") === cate &&
+          noteTitle.includes(this.state.noteInput.toLowerCase())
+        ) {
+          document.getElementById(id0).style.boxShadow =
+            "red 0px 0px 20px 10px";
+        }
       }
+
+      this.setState({
+        filterForId: cate,
+        noteInput: "",
+      });
+
+      document.getElementById("filterForDetails").style.visibility = "visible";
+
+      this.showFilters();
+    } else {
+      this.filterClear();
+
+      var listOfIconDivs1 = document.getElementsByClassName("iconDiv");
+
+      for (let x = 0; x < listOfIconDivs1.length; x++) {
+        var id1 = listOfIconDivs1[x].id;
+        if (listOfIconDivs1[x].getAttribute("data-category") === cate) {
+          document.getElementById(id1).style.boxShadow =
+            "red 0px 0px 20px 10px";
+        }
+      }
+
+      this.setState({
+        filterForId: cate,
+      });
+
+      document.getElementById("filterForDetails").style.visibility = "visible";
+
+      this.showFilters();
     }
-
-    this.setState({
-      filterForId: cate,
-    });
-
-    document.getElementById("filterForDetails").style.visibility = "visible";
-
-    this.showFilters();
   };
 
   filterClear = () => {
@@ -111,7 +146,14 @@ class Navbar extends React.Component {
                   in={this.state.showFilterBTNs}
                   timeout={{ enter: 400, exit: 400 }}
                 >
-                  <button className="filterBtnCate">Notes</button>
+                  <button
+                    className="filterBtnCate"
+                    onClick={() => {
+                      this.filterHighlightGeneralCate("Notes");
+                    }}
+                  >
+                    Notes
+                  </button>
                 </Zoom>
 
                 <Zoom
@@ -124,6 +166,8 @@ class Navbar extends React.Component {
                         id="noteTextInput"
                         type="text"
                         placeholder="Input a keyword to look for..."
+                        value={this.state.noteInput}
+                        onChange={this.handleNoteUserInput}
                       />
                     </div>
                   </div>
@@ -135,7 +179,14 @@ class Navbar extends React.Component {
                   in={this.state.showFilterBTNs}
                   timeout={{ enter: 450, exit: 350 }}
                 >
-                  <button className="filterBtnCate">Mobs</button>
+                  <button
+                    className="filterBtnCate"
+                    onClick={() => {
+                      this.filterHighlightGeneralCate("Mobs");
+                    }}
+                  >
+                    Mobs
+                  </button>
                 </Zoom>
 
                 <Zoom
@@ -144,8 +195,22 @@ class Navbar extends React.Component {
                 >
                   <div className="box">
                     <div className="innerBox">
-                      <button className="filterBtn">Standard Mob</button>
-                      <button className="filterBtn">Elite Mob</button>
+                      <button
+                        className="filterBtn"
+                        onClick={() => {
+                          this.filterHighlightSubCate("MobStandard");
+                        }}
+                      >
+                        Standard Mob
+                      </button>
+                      <button
+                        className="filterBtn"
+                        onClick={() => {
+                          this.filterHighlightSubCate("MobElite");
+                        }}
+                      >
+                        Elite Mob
+                      </button>
                     </div>
                   </div>
                 </Zoom>
@@ -198,7 +263,14 @@ class Navbar extends React.Component {
               in={this.state.showFilterBTNs}
               timeout={{ enter: 500, exit: 300 }}
             >
-              <button className="filterBtnCate">Mining</button>
+              <button
+                className="filterBtnCate"
+                onClick={() => {
+                  this.filterHighlightGeneralCate("Mining");
+                }}
+              >
+                Mining
+              </button>
             </Zoom>
             <Zoom
               in={this.state.showFilterBTNs}
@@ -206,24 +278,136 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">Blightcrag</button>
-                  <button className="filterBtn">Earthcarg</button>
-                  <button className="filterBtn">Gold</button>
-                  <button className="filterBtn">Iron</button>
-                  <button className="filterBtn">Lifecrag</button>
-                  <button className="filterBtn">Lodestone</button>
-                  <button className="filterBtn">Orichalcum</button>
-                  <button className="filterBtn">Platinum</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Blightcrag");
+                    }}
+                  >
+                    Blightcrag
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Earthcrag");
+                    }}
+                  >
+                    Earthcrag
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Gold");
+                    }}
+                  >
+                    Gold
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Iron");
+                    }}
+                  >
+                    Iron
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Lifecrag");
+                    }}
+                  >
+                    Lifecrag
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Lodestone");
+                    }}
+                  >
+                    Lodestone
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Orichalcum");
+                    }}
+                  >
+                    Orichalcum
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Platinum");
+                    }}
+                  >
+                    Platinum
+                  </button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">Saltpeter</button>
-                  <button className="filterBtn">Scorchstone</button>
-                  <button className="filterBtn">Seepingstone</button>
-                  <button className="filterBtn">Shockspire</button>
-                  <button className="filterBtn">Silver</button>
-                  <button className="filterBtn">Soulspire</button>
-                  <button className="filterBtn">Springstone</button>
-                  <button className="filterBtn">Starmetal</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Saltpeter");
+                    }}
+                  >
+                    Saltpeter
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Scorchstone");
+                    }}
+                  >
+                    Scorchstone
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Seepingstone");
+                    }}
+                  >
+                    Seepingstone
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Shockspire");
+                    }}
+                  >
+                    Shockspire
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Silver");
+                    }}
+                  >
+                    Silver
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Soulspire");
+                    }}
+                  >
+                    Soulspire
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Springstone");
+                    }}
+                  >
+                    Springstone
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Starmetal");
+                    }}
+                  >
+                    Starmetal
+                  </button>
                 </div>
               </div>
             </Zoom>
@@ -232,7 +416,14 @@ class Navbar extends React.Component {
               in={this.state.showFilterBTNs}
               timeout={{ enter: 550, exit: 250 }}
             >
-              <button className="filterBtnCate">Harvesting</button>
+              <button
+                className="filterBtnCate"
+                onClick={() => {
+                  this.filterHighlightGeneralCate("Harvesting");
+                }}
+              >
+                Harvesting
+              </button>
             </Zoom>
             <Zoom
               in={this.state.showFilterBTNs}
@@ -240,25 +431,144 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">Blightmoth</button>
-                  <button className="filterBtn">Blightroot</button>
-                  <button className="filterBtn">Dragonglory</button>
-                  <button className="filterBtn">Earthshell Turtle</button>
-                  <button className="filterBtn">Earthspine</button>
-                  <button className="filterBtn">Floating Spinefish</button>
-                  <button className="filterBtn">Hemp</button>
-                  <button className="filterBtn">Lifebloom</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Blightmoth");
+                    }}
+                  >
+                    Blightmoth
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Blightroot");
+                    }}
+                  >
+                    Blightroot
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Dragonglory");
+                    }}
+                  >
+                    Dragonglory
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("EarthshellTurtle");
+                    }}
+                  >
+                    Earthshell Turtle
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Earthspine");
+                    }}
+                  >
+                    Earthspine
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("FloatingSpinefish");
+                    }}
+                  >
+                    Floating Spinefish
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Hemp");
+                    }}
+                  >
+                    Hemp
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Lifebloom");
+                    }}
+                  >
+                    Lifebloom
+                  </button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">Lifemoth</button>
-                  <button className="filterBtn">Lightning Beetle</button>
-                  <button className="filterBtn">Rivercress</button>
-                  <button className="filterBtn">Salamander Snail</button>
-                  <button className="filterBtn">Shockblub</button>
-                  <button className="filterBtn">Silkweed</button>
-                  <button className="filterBtn">Soulspire</button>
-                  <button className="filterBtn">Soulwyrm</button>
-                  <button className="filterBtn">Wirefiber</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Lifemoth");
+                    }}
+                  >
+                    Lifemoth
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("LightningBeetle");
+                    }}
+                  >
+                    Lightning Beetle
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Rivercress");
+                    }}
+                  >
+                    Rivercress
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("SalamanderSnail");
+                    }}
+                  >
+                    Salamander Snail
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Shockblub");
+                    }}
+                  >
+                    Shockblub
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Silkweed");
+                    }}
+                  >
+                    Silkweed
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Soulspire");
+                    }}
+                  >
+                    Soulspire
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Soulwyrm");
+                    }}
+                  >
+                    Soulwyrm
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Wirefiber");
+                    }}
+                  >
+                    Wirefiber
+                  </button>
                 </div>
               </div>
             </Zoom>
@@ -267,7 +577,14 @@ class Navbar extends React.Component {
               in={this.state.showFilterBTNs}
               timeout={{ enter: 600, exit: 200 }}
             >
-              <button className="filterBtnCate">Fungi</button>
+              <button
+                className="filterBtnCate"
+                onClick={() => {
+                  this.filterHighlightGeneralCate("Fungi");
+                }}
+              >
+                Fungi
+              </button>
             </Zoom>
             <Zoom
               in={this.state.showFilterBTNs}
@@ -275,26 +592,138 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">Bumbleblossom</button>
-                  <button className="filterBtn">Capped Tanglewisp</button>
-                  <button className="filterBtn">Cascaded Gillflower</button>
-                  <button className="filterBtn">Corrupted Bloodspore</button>
-                  <button className="filterBtn">Flowering Tubecap</button>
-                  <button className="filterBtn">Fronded Petalcap</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Bumbleblossom");
+                    }}
+                  >
+                    Bumbleblossom
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("CappedTanglewisp");
+                    }}
+                  >
+                    Capped Tanglewisp
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("CascadedGillflower");
+                    }}
+                  >
+                    Cascaded Gillflower
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("CorruptedBloodspore");
+                    }}
+                  >
+                    Corrupted Bloodspore
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("FloweringTubecap");
+                    }}
+                  >
+                    Flowering Tubecap
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("FrondedPetalcap");
+                    }}
+                  >
+                    Fronded Petalcap
+                  </button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">Slimy Twistcap</button>
-                  <button className="filterBtn">Spinecap</button>
-                  <button className="filterBtn">Suncreeper</button>
-                  <button className="filterBtn">Tanglewisp</button>
-                  <button className="filterBtn">Tendrilspine</button>
-                  <button className="filterBtn">Toadpot</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("SlimyTwistcap");
+                    }}
+                  >
+                    Slimy Twistcap
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Spinecap");
+                    }}
+                  >
+                    Spinecap
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Suncreeper");
+                    }}
+                  >
+                    Suncreeper
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("UncappedTanglewisp");
+                    }}
+                  >
+                    Tanglewisp
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Tendrilspine");
+                    }}
+                  >
+                    Tendrilspine
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Toadpot");
+                    }}
+                  >
+                    Toadpot
+                  </button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">Twisted Tubecap</button>
-                  <button className="filterBtn">Void Pitcher</button>
-                  <button className="filterBtn">Warm Platecap</button>
-                  <button className="filterBtn">Weeping Shellbed</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("TwistedTubecap");
+                    }}
+                  >
+                    Twisted Tubecap
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("VoidPitcher");
+                    }}
+                  >
+                    Void Pitcher
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("WarmPlatecap");
+                    }}
+                  >
+                    Warm Platecap
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("WeepingShellbed");
+                    }}
+                  >
+                    Weeping Shellbed
+                  </button>
                 </div>
               </div>
             </Zoom>
@@ -303,7 +732,14 @@ class Navbar extends React.Component {
               in={this.state.showFilterBTNs}
               timeout={{ enter: 650, exit: 150 }}
             >
-              <button className="filterBtnCate">Tracking</button>
+              <button
+                className="filterBtnCate"
+                onClick={() => {
+                  this.filterHighlightGeneralCate("Tracking");
+                }}
+              >
+                Tracking
+              </button>
             </Zoom>
             <Zoom
               in={this.state.showFilterBTNs}
@@ -311,28 +747,154 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">Alligator</button>
-                  <button className="filterBtn">Bear</button>
-                  <button className="filterBtn">Bison</button>
-                  <button className="filterBtn">Boar</button>
-                  <button className="filterBtn">Bobcat</button>
-                  <button className="filterBtn">Cow</button>
-                  <button className="filterBtn">Elk</button>
-                  <button className="filterBtn">Goat</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Alligator");
+                    }}
+                  >
+                    Alligator
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Bear");
+                    }}
+                  >
+                    Bear
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Bison");
+                    }}
+                  >
+                    Bison
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Boar");
+                    }}
+                  >
+                    Boar
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Bobcat");
+                    }}
+                  >
+                    Bobcat
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Cow");
+                    }}
+                  >
+                    Cow
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Elk");
+                    }}
+                  >
+                    Elk
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Goat");
+                    }}
+                  >
+                    Goat
+                  </button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">Lion</button>
-                  <button className="filterBtn">Lynx</button>
-                  <button className="filterBtn">Pig</button>
-                  <button className="filterBtn">Rabbit</button>
-                  <button className="filterBtn">Sheep</button>
-                  <button className="filterBtn">Turkey</button>
-                  <button className="filterBtn">Wolf</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Lion");
+                    }}
+                  >
+                    Lion
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Lynx");
+                    }}
+                  >
+                    Lynx
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Pig");
+                    }}
+                  >
+                    Pig
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Rabbit");
+                    }}
+                  >
+                    Rabbit
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Sheep");
+                    }}
+                  >
+                    Sheep
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Turkey");
+                    }}
+                  >
+                    Turkey
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Wolf");
+                    }}
+                  >
+                    Wolf
+                  </button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">Forest Elemental</button>
-                  <button className="filterBtn">Mountain Elemental</button>
-                  <button className="filterBtn">Tundra Elemental</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("ForestElemental");
+                    }}
+                  >
+                    Forest Elemental
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("MountainElemental");
+                    }}
+                  >
+                    Mountain Elemental
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("TundraElemental");
+                    }}
+                  >
+                    Tundra Elemental
+                  </button>
                 </div>
               </div>
             </Zoom>
@@ -341,7 +903,14 @@ class Navbar extends React.Component {
               in={this.state.showFilterBTNs}
               timeout={{ enter: 700, exit: 100 }}
             >
-              <button className="filterBtnCate">Farming</button>
+              <button
+                className="filterBtnCate"
+                onClick={() => {
+                  this.filterHighlightGeneralCate("Farming");
+                }}
+              >
+                Farming
+              </button>
             </Zoom>
             <Zoom
               in={this.state.showFilterBTNs}
@@ -349,24 +918,136 @@ class Navbar extends React.Component {
             >
               <div className="box">
                 <div className="innerBox">
-                  <button className="filterBtn">Barly</button>
-                  <button className="filterBtn">Berry</button>
-                  <button className="filterBtn">Blueberry</button>
-                  <button className="filterBtn">Broccoli</button>
-                  <button className="filterBtn">Cabbage</button>
-                  <button className="filterBtn">Carrot</button>
-                  <button className="filterBtn">Corn</button>
-                  <button className="filterBtn">Cranberry</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Barley");
+                    }}
+                  >
+                    Barley
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Berry");
+                    }}
+                  >
+                    Berry
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Blueberry");
+                    }}
+                  >
+                    Blueberry
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Broccoli");
+                    }}
+                  >
+                    Broccoli
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Cabbage");
+                    }}
+                  >
+                    Cabbage
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Carrot");
+                    }}
+                  >
+                    Carrot
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Corn");
+                    }}
+                  >
+                    Corn
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Cranberries");
+                    }}
+                  >
+                    Cranberries
+                  </button>
                 </div>
                 <div className="innerBox">
-                  <button className="filterBtn">Herbs</button>
-                  <button className="filterBtn">Honey</button>
-                  <button className="filterBtn">Melon</button>
-                  <button className="filterBtn">Nuts</button>
-                  <button className="filterBtn">Potato</button>
-                  <button className="filterBtn">Squash</button>
-                  <button className="filterBtn">Strawberry</button>
-                  <button className="filterBtn">Wheat</button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Herbs");
+                    }}
+                  >
+                    Herbs
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Honey");
+                    }}
+                  >
+                    Honey
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Melon");
+                    }}
+                  >
+                    Melon
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Nuts");
+                    }}
+                  >
+                    Nuts
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Potato");
+                    }}
+                  >
+                    Potato
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Squash");
+                    }}
+                  >
+                    Squash
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Strawberry");
+                    }}
+                  >
+                    Strawberry
+                  </button>
+                  <button
+                    className="filterBtn"
+                    onClick={() => {
+                      this.filterHighlightSubCate("Wheat");
+                    }}
+                  >
+                    Wheat
+                  </button>
                 </div>
               </div>
             </Zoom>
