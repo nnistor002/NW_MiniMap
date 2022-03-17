@@ -130,7 +130,7 @@ class Navbar extends React.Component {
         <div id="filteringForDiv">
           <div id="filterForDetails">
             {" Find - "}
-            <span id="targetFilterIdSlot">{this.state.filterForId}</span>{" "}
+            <span id="targetFilterIdSlot">{this.state.filterForId}</span>
             {" -  "}
             <button id="clearFilterBtn" onClick={this.filterClear}>
               Clear Filter

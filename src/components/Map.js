@@ -28,6 +28,7 @@ class Map extends React.Component {
       },
       mapXCoord: 0,
       mapYCoord: 0,
+      removeMode: true,
     };
   }
 
@@ -190,12 +191,13 @@ class Map extends React.Component {
 const mapStateToProps = (state) => {
   return {
     data: state.dataSet,
+    removeMode: state.removeMode,
   };
 };
 
 const mapDispatchToProps = (dispatch) => ({
   updateCoords: (clickCoords) =>
-    dispatch({ type: "UPDATE", payload: clickCoords }),
+    dispatch({ type: "UPDATECOORD", payload: clickCoords }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Map);

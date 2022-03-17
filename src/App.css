@@ -11,14 +11,15 @@
   align-items: center;
   position: absolute;
   margin: auto;
-  width: 99%;
+  width: auto;
   top: 3px;
   left: 4px;
-  bottom: 4px;
+  bottom: 2px;
   right: 4px;
   background-color: white;
   visibility: visible;
   z-index: 2;
+  user-select: none;
 }
 
 #imgWelcome {

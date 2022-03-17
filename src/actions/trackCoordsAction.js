@@ -1,4 +1,4 @@
-export const UpdateCoords = "UPDATE";
+export const UpdateCoords = "UPDATECOORD";
 
 export const updateCoords = (XY) => {
   return {

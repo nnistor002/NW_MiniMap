@@ -62,35 +62,37 @@ class RingMenuEdit extends React.Component {
   handleMiddleClickMenu(e) {
     var welcomeScreenVisible =
       document.getElementById("WelcomeDiv").style.visibility;
-    if (e.button === 1 && welcomeScreenVisible === "hidden") {
-      let z = document.getElementById("rightClickMenuContainer");
+    if (this.props.removeMode !== true) {
+      if (e.button === 1 && welcomeScreenVisible === "hidden") {
+        let z = document.getElementById("rightClickMenuContainer");
 
-      // let mapOffSetX = e.offsetX;
-      // let mapOffSetY = e.offsetY;
+        // let mapOffSetX = e.offsetX;
+        // let mapOffSetY = e.offsetY;
 
-      // CREATE BORDER LOGIC IF CLICK IS NEXT TO SIDE OF SCREEN
-      z.style.left = this.state.windowMousePosX - 350 + "px";
-      z.style.top = this.state.windowMousePosY - 350 + "px";
+        // CREATE BORDER LOGIC IF CLICK IS NEXT TO SIDE OF SCREEN
+        z.style.left = this.state.windowMousePosX - 350 + "px";
+        z.style.top = this.state.windowMousePosY - 350 + "px";
 
-      //console.log(this.props.trackXY);
+        //console.log(this.props.trackXY);
 
-      this.setState({
-        showMainCloseBTN: true,
-        mainBTNList: {
+        this.setState({
           showMainCloseBTN: true,
-          showMainNotePinBTN: true,
-          showMainMobsBTN: true,
-          showMainMiningBTN: true,
-          showMainHarvestingBTN: true,
-          showMainFungiBTN: true,
-          showMainTrackingBTN: true,
-          showMainFarmingBTN: true,
-          showMainLoggingBTN: true,
-        },
-      });
+          mainBTNList: {
+            showMainCloseBTN: true,
+            showMainNotePinBTN: true,
+            showMainMobsBTN: true,
+            showMainMiningBTN: true,
+            showMainHarvestingBTN: true,
+            showMainFungiBTN: true,
+            showMainTrackingBTN: true,
+            showMainFarmingBTN: true,
+            showMainLoggingBTN: true,
+          },
+        });
 
-      if (window.innerWidth < 1900) {
-        z.style.transform = "scale(.8)";
+        if (window.innerWidth < 1900) {
+          z.style.transform = "scale(.8)";
+        }
       }
     }
   }
@@ -243,6 +245,7 @@ class RingMenuEdit extends React.Component {
 const mapStateToProps = (state) => {
   return {
     trackXY: state.trackXY,
+    removeMode: state.removeMode,
   };
 };
 

@@ -1,0 +1,68 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  pointer-events: none;
+}
+
+#removepinContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 1%;
+  top: 1%;
+  width: 210px;
+  height: auto;
+  background-color: rgba(19, 19, 19, 0.776);
+  border: 2px solid rgb(212, 158, 20);
+  position: absolute;
+  border-radius: 10px;
+  padding: 4px;
+  color: rgb(212, 158, 20);
+  font-size: medium;
+  font-weight: 600;
+  background-color: rgba(19, 19, 19, 0.856);
+  text-shadow: 2px 2px 2px black, 0 0 10px rgb(0, 0, 0);
+  text-align: center;
+  user-select: none;
+  pointer-events: all;
+}
+
+#removepinContainer:hover {
+  border: 2px solid rgb(255, 0, 0);
+  color: red;
+}
+
+.span {
+  padding-bottom: 3px;
+  font-size: medium;
+  font-weight: 800;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: red;
+}
+
+#removeModeNotice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 1%;
+  width: 70%;
+  height: 40px;
+  border: 3px solid rgb(255, 0, 0);
+  position: absolute;
+  border-radius: 10px;
+  padding: 4px;
+  color: rgb(255, 0, 0);
+  font-size: large;
+  font-weight: 600;
+  background-color: rgba(19, 19, 19, 0.856);
+  text-shadow: 2px 2px 2px black, 0 0 5px rgb(0, 0, 0);
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+  visibility: hidden;
+}

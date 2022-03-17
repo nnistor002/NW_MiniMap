@@ -24,6 +24,11 @@ class MobBtnClass extends React.Component {
       newPin.style.top = this.props.trackXY[1] - 15 + "px";
       newPin.title = t;
       newPin.dataset.category = c;
+      newPin.onclick = () => {
+        if (this.props.removeMode) {
+          document.getElementById("overLayDiv").removeChild(newPin);
+        }
+      };
 
       document.getElementById("overLayDiv").appendChild(newPin);
 
@@ -118,6 +123,7 @@ class MobBtnClass extends React.Component {
 const mapStateToProps = (state) => {
   return {
     trackXY: state.trackXY,
+    removeMode: state.removeMode,
   };
 };
 
