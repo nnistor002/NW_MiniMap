@@ -28,18 +28,21 @@ class App extends Component {
     reader.onload = (e) => {
       let data = JSON.parse(e.target.result);
       let n = data.Categories;
-      this.props.updateDataSet(n);
+
+      if (n.JSONDATAFOR === "NWMINIMAP" && Object.keys(n).length === 2) {
+        this.props.updateDataSet(n);
+      } else {
+        console.log("NOPE!!!!!!!!");
+      }
     };
 
     setTimeout(() => {
       //How to find out the Categories
       //console.log(Object.keys(this.props.data[0]).toString());
-
-      for (let i = 0; i < this.props.data.length; i++) {
-        let categorie = this.props.data[i];
-        console.log(categorie);
-      }
-
+      // for (let i = 0; i < this.props.data.length; i++) {
+      //   let categorie = this.props.data[i];
+      //   console.log(categorie);
+      // }
       // //How to add to cords new Arrays targetting subCates
       // let targetSubCate = this.props.data[0].Logging[0].cords;
       // console.log(targetSubCate);
@@ -95,7 +98,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
   updateDataSet: (importJSONData) =>
-    dispatch({ type: "UPLOAD", payload: importJSONData }),
+    dispatch({ type: "UPLOADDATA", payload: importJSONData }),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

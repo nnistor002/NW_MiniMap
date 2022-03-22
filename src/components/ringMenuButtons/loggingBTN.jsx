@@ -29,6 +29,11 @@ class LoggingBtnClass extends React.Component {
       }
     };
 
+    this.props.addPinToDataSet(c, t, [
+      this.props.trackXY[0] - 15,
+      this.props.trackXY[1] - 15,
+    ]);
+
     document.getElementById("overLayDiv").appendChild(newPin);
 
     this.props.subButtonCloseAction();
@@ -96,7 +101,16 @@ const mapStateToProps = (state) => {
   return {
     trackXY: state.trackXY,
     removeMode: state.removeMode,
+    dataSet: state.dataSet,
   };
 };
 
-export default connect(mapStateToProps)(LoggingBtnClass);
+const mapDispatchToProps = (dispatch) => ({
+  addPinToDataSet: (cate, subCate, l) =>
+    dispatch({
+      type: "APPENDDATA",
+      payload: [cate, subCate, l],
+    }),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoggingBtnClass);

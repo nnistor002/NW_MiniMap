@@ -1,52 +1,104 @@
 {
-  "Categories": [
-    {
-      "Logging": [
-        {
-          "subCategory": "Wyrdwood",
-          "cords": [
-            [3000, 3020],
-            [3000, 3040],
-            [3000, 3060],
-            [3000, 3080],
-            [3000, 3100]
-          ]
-        },
-        {
-          "subCategory": "Ironwood",
-          "cords": [
-            [3020, 3000],
-            [3040, 3000],
-            [3060, 3000],
-            [3080, 3000],
-            [3100, 3000]
-          ]
-        }
-      ]
+  "Categories": {
+    "Notes": [],
+    "Mobs": [],
+    "Mining": {
+      "Saltpeter": [],
+      "Iron": [],
+      "Silver": [],
+      "Gold": [],
+      "Starmetal": [],
+      "Lodestone": [],
+      "Platinum": [],
+      "Orichalcum": [],
+      "SeepingStone": [],
+      "Blightcrag": [],
+      "Lifecrag": [],
+      "Earthcrag": [],
+      "Soulspire": [],
+      "Shockspire": [],
+      "Scorchstone": [],
+      "Springstone": []
     },
-    {
-      "Mining": [
-        {
-          "subCategory": "Gold",
-          "cords": [
-            [2000, 2020],
-            [2000, 2040],
-            [2000, 2060],
-            [2000, 2080],
-            [2000, 2100]
-          ]
-        },
-        {
-          "subCategory": "Lodestone",
-          "cords": [
-            [2020, 2000],
-            [2040, 2000],
-            [2060, 2000],
-            [2080, 2000],
-            [2100, 2000]
-          ]
-        }
-      ]
-    }
-  ]
+    "Harvesting": {
+      "Hemp": [],
+      "Silkweed": [],
+      "Wirefiber": [],
+      "Blightroot": [],
+      "Dragonglory": [],
+      "Earthspine": [],
+      "Lifebloom": [],
+      "Rivercress": [],
+      "Shockblub": [],
+      "Soulspire": [],
+      "Blightmoth": [],
+      "Earthshell Turtle": [],
+      "Floating Spinefish": [],
+      "Lifemoth": [],
+      "Lightning Beetle": [],
+      "Salamander Snail": [],
+      "Soulwyrm": []
+    },
+    "Fungi": {
+      "Bumbleblossom": [],
+      "Capped Tanglewisp": [],
+      "Cascaded Gillflower": [],
+      "Corrupted Bloodspore": [],
+      "Flowering Tubecap": [],
+      "Fronded Petalcap": [],
+      "Slimy Twistcap": [],
+      "Spinecap": [],
+      "Suncreeper": [],
+      "Tanglewisp": [],
+      "Tendrilspine": [],
+      "Toadpot": [],
+      "Twisted Tubecap": [],
+      "Void Pitcher": [],
+      "Warm Platecap": [],
+      "Weeping Shellbed": []
+    },
+    "Tracking": {
+      "Alligator": [],
+      "Bear": [],
+      "Bison": [],
+      "Boar": [],
+      "Bobcat": [],
+      "Cow": [],
+      "Elk": [],
+      "Goat": [],
+      "Lion": [],
+      "Lynx": [],
+      "Pig": [],
+      "Rabbit": [],
+      "Sheep": [],
+      "Turkey": [],
+      "Wolf": [],
+      "Forest Elemental": [],
+      "Mountain Elemental": [],
+      "Tundra Elemental": []
+    },
+    "Farming": {
+      "Barley": [],
+      "Berry": [],
+      "Blueberry": [],
+      "Broccoli": [],
+      "Cabbage": [],
+      "Carrot": [],
+      "Corn": [],
+      "Cranberries": [],
+      "Herbs": [],
+      "Honey": [],
+      "Melon": [],
+      "Nuts": [],
+      "Potato": [],
+      "Squash": [],
+      "Strawberry": [],
+      "Wheat": []
+    },
+    "Logging": {
+      "Iron Wood": [],
+      "Wyrd Wood": []
+    },
+    "JSONDATAFOR": "NWMINIMAP"
+  }
 }

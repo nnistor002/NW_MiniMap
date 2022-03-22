@@ -30,6 +30,11 @@ class MobBtnClass extends React.Component {
         }
       };
 
+      this.props.addPinToDataSet(c, t, [
+        this.props.trackXY[0] - 15,
+        this.props.trackXY[1] - 15,
+      ]);
+
       document.getElementById("overLayDiv").appendChild(newPin);
 
       this.setState({
@@ -127,4 +132,12 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(MobBtnClass);
+const mapDispatchToProps = (dispatch) => ({
+  addPinToDataSet: (cate, subCate, l) =>
+    dispatch({
+      type: "APPENDDATAINPUTTYPE",
+      payload: [cate, subCate, l],
+    }),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(MobBtnClass);
