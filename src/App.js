@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Map from "./components/Map";
 import RingMenu from "./components/RingMenuEdit.jsx";
 import RemovePinBTN from "./components/RemovePins.jsx";
+import SaveBTN from "./components/SaveBTN.jsx";
 
 import welcomeImg from "./images/WelcomeScreen.png";
 // import loadingIconImg from "./images/loadingIcon.png";
@@ -85,6 +86,7 @@ class App extends Component {
         <RingMenu />
         <Navbar />
         <RemovePinBTN />
+        <SaveBTN />
       </div>
     );
   }
