@@ -119,6 +119,20 @@ const dataContainer = (state = data, action) => {
         action.payload[2],
       ]);
       return state;
+    case "REMOVEDATA":
+      if (action.payload[0] === "Notes" || action.payload[0] === "Mobs") {
+        state.Categories[action.payload[0]].splice(
+          [action.payload[1], action[2]],
+          1
+        );
+      } else {
+        state.Categories[action.payload[0]][action.payload[1]].splice(
+          action.payload[2],
+          1
+        );
+      }
+
+      return state;
     default:
       return state;
   }

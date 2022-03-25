@@ -26,6 +26,10 @@ class TrackingBtnClass extends React.Component {
     newPin.onclick = () => {
       if (this.props.removeMode) {
         document.getElementById("overLayDiv").removeChild(newPin);
+        this.props.removePinFromDataSet(c, t, [
+          this.props.trackXY[0] - 15,
+          this.props.trackXY[1] - 15,
+        ]);
       }
     };
 
@@ -354,6 +358,11 @@ const mapDispatchToProps = (dispatch) => ({
   addPinToDataSet: (cate, subCate, l) =>
     dispatch({
       type: "APPENDDATA",
+      payload: [cate, subCate, l],
+    }),
+  removePinFromDataSet: (cate, subCate, l) =>
+    dispatch({
+      type: "REMOVEDATA",
       payload: [cate, subCate, l],
     }),
 });
