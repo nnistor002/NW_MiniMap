@@ -122,7 +122,7 @@ const dataContainer = (state = data, action) => {
     case "REMOVEDATA":
       if (action.payload[0] === "Notes" || action.payload[0] === "Mobs") {
         state.Categories[action.payload[0]].splice(
-          [action.payload[1], action[2]],
+          [action.payload[1], action.payload[2]],
           1
         );
       } else {

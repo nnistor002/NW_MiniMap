@@ -36,9 +36,12 @@ class Navbar extends React.Component {
     var listOfIconDivs = document.getElementsByClassName("iconDiv");
 
     for (let x = 0; x < listOfIconDivs.length; x++) {
-      var id = listOfIconDivs[x].id;
-      if (id.includes(idTargetFilter)) {
-        document.getElementById(id).style.boxShadow = "red 0px 0px 20px 10px";
+      var idHolder = listOfIconDivs[x].id;
+      var splitID = idHolder.split("_");
+      var id = splitID[0].replace(/\s/g, "");
+      if (id === idTargetFilter) {
+        document.getElementById(idHolder).style.boxShadow =
+          "red 0px 0px 20px 10px";
       }
       this.setState({
         filterForId: idTargetFilter,

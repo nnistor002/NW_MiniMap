@@ -14,7 +14,7 @@ import { connect } from "react-redux";
 
 import exit from "../images/menuIcons/Exit.png";
 
-class RingMenuEdit extends React.Component {
+class RingMenu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -249,4 +249,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(RingMenuEdit);
+export default connect(mapStateToProps)(RingMenu);
