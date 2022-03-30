@@ -1,0 +1,16 @@
+#exitDivBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 1%;
+  right: 1.2%;
+  background-color: red;
+  border-radius: 10px;
+  border: 3px solid rgb(212, 158, 20);
+}
+
+#exitIMG {
+  width: 40px;
+  height: 40px;
+}

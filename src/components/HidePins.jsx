@@ -14,11 +14,12 @@ class HidePinBTN extends React.Component {
     return (
       <div
         id="hidePinContainerDiv"
+        title="View or Hide Pins"
         onClick={() => {
           if (this.state.HidePins) {
             document.getElementById("VH_PIN").src = vpinIMG;
             document.getElementById("VH_PIN").style.boxShadow =
-              "rgb(72, 116, 84) 0px 0px 20px 5px";
+              "rgb(72, 116, 84) 0px 0px 20px 10px";
             this.setState({
               HidePins: false,
             });
@@ -26,7 +27,7 @@ class HidePinBTN extends React.Component {
           } else {
             document.getElementById("VH_PIN").src = hpinIMG;
             document.getElementById("VH_PIN").style.boxShadow =
-              "rgb(146, 67, 67) 0px 0px 20px 5px";
+              "rgb(146, 67, 67) 0px 0px 20px 10px";
             this.setState({
               HidePins: true,
             });
