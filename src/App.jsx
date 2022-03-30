@@ -5,6 +5,7 @@ import Map from "./components/Map";
 import RingMenu from "./components/RingMenu.jsx";
 import RemovePinBTN from "./components/RemovePins.jsx";
 import SaveBTN from "./components/SaveBTN.jsx";
+import HidePinBTN from "./components/HidePins.jsx";
 
 import NoteIcon from "./images/menuIcons/NotePin.png";
 import MobIcon from "./images/menuIcons/Mobs.png";
@@ -249,6 +250,7 @@ class App extends Component {
         <Navbar />
         <RemovePinBTN />
         <SaveBTN />
+        <HidePinBTN />
       </div>
     );
   }

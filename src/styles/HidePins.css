@@ -1,0 +1,15 @@
+#hidePinContainerDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 1.2%;
+  bottom: 2%;
+}
+
+#VH_PIN {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: rgb(72, 116, 84) 0px 0px 20px 5px;
+}

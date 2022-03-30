@@ -125,8 +125,8 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.863);
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   visibility: hidden;
 }
 

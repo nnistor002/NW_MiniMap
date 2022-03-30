@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Map.css";
 
-import fullMap from "../images/New_World_Map_FinalSD.jpg";
+import fullMap from "../images/New_World_Map_FinalSD_EDIT.jpg";
 
 import arrow_Up from "../images/icons/ArrowUp.png";
 import arrow_Down from "../images/icons/ArrowDown.png";

@@ -121,15 +121,28 @@ const dataContainer = (state = data, action) => {
       return state;
     case "REMOVEDATA":
       if (action.payload[0] === "Notes" || action.payload[0] === "Mobs") {
-        state.Categories[action.payload[0]].splice(
-          [action.payload[1], action.payload[2]],
-          1
-        );
+        let arrayHolder = state.Categories[action.payload[0]];
+
+        arrayHolder.forEach((value, index) => {
+          if (
+            value[0] === action.payload[1] &&
+            JSON.stringify(value[1]) === JSON.stringify(action.payload[2])
+          ) {
+            state.Categories[action.payload[0]].splice(index, 1);
+          }
+        });
       } else {
-        state.Categories[action.payload[0]][action.payload[1]].splice(
-          action.payload[2],
-          1
-        );
+        let arrayHolder =
+          state.Categories[action.payload[0]][action.payload[1]];
+
+        arrayHolder.forEach((value, index) => {
+          if (JSON.stringify(value) === JSON.stringify(action.payload[2])) {
+            state.Categories[action.payload[0]][action.payload[1]].splice(
+              index,
+              1
+            );
+          }
+        });
       }
 
       return state;
