@@ -29,6 +29,7 @@
   text-align: center;
   user-select: none;
   pointer-events: all;
+  transform: scale(0.8);
 }
 
 #saveContainer:hover {

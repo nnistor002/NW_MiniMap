@@ -1,17 +1,18 @@
 #navBarContainer {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  position: absolute;
   justify-content: center;
   flex-shrink: 1;
   align-items: center;
-  top: 10px;
+  top: -8.7%;
   height: 98%;
   width: 98%;
   margin: auto;
   user-select: none;
   pointer-events: none;
   gap: 5px;
+  transform: scale(0.8);
 }
 
 #nav_bar {
@@ -197,6 +198,7 @@
   width: 800px;
   height: 35px;
   pointer-events: none;
+  transform: scale(0.8);
 }
 
 #filterForDetails {

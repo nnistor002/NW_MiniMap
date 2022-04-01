@@ -18,8 +18,8 @@
 }
 
 #cord_div {
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
+  bottom: -1%;
   margin: auto;
   width: 100%;
   font-weight: bold;
@@ -28,6 +28,7 @@
     0px -1px rgba(255, 255, 255, 0.708);
   pointer-events: none;
   user-select: none;
+  transform: scale(0.8);
 }
 
 #full_Map {

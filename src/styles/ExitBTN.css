@@ -1,3 +1,10 @@
+#container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #exitDivBox {
   position: absolute;
   display: flex;
@@ -8,9 +15,67 @@
   background-color: red;
   border-radius: 10px;
   border: 3px solid rgb(212, 158, 20);
+  pointer-events: all;
 }
 
 #exitIMG {
   width: 40px;
   height: 40px;
+}
+
+#exitDivBox:hover {
+  border: 3px solid rgb(82, 65, 22);
+}
+
+#popUp {
+  position: absolute;
+  width: 800px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: rgb(0, 0, 0);
+  border: 3px solid rgb(212, 20, 20);
+  box-shadow: rgba(0, 0, 0, 0.685) 0px 0px 100px 500px;
+  pointer-events: all;
+  visibility: hidden;
+  text-align: center;
+}
+
+#popUp button {
+  width: 150px;
+  height: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 10px;
+  font-size: x-large;
+}
+
+#y:hover {
+  background-color: rgb(72, 116, 84);
+}
+
+#n:hover {
+  background-color: rgb(146, 67, 67);
+}
+
+#popUp h1 {
+  color: rgb(255, 0, 0);
+}
+
+#popUp h5 {
+  color: rgb(255, 0, 0);
+}
+
+#exitPopUp {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(148, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 2px;
+  right: 5px;
+  top: 5px;
+}
+
+#exitPopUp:hover {
+  border: 1px solid white;
 }

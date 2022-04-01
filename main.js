@@ -21,6 +21,18 @@ function createWindow() {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
+  mainWindow.on("close", function (e) {
+    const choice = require("electron").dialog.showMessageBoxSync(this, {
+      type: "question",
+      buttons: ["Yes", "No"],
+      title: "Confirm",
+      message:
+        "Are you sure you want to quit? \n--- If you have not saved your New DataSets you will lose them. ---",
+    });
+    if (choice === 1) {
+      e.preventDefault();
+    }
+  });
 }
 
 // This method will be called when Electron has finished
