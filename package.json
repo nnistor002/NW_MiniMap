@@ -1,6 +1,9 @@
 {
   "name": "nw_minimap",
   "version": "0.1.0",
+  "homepage": "./",
+  "author": "Natanael Nistor",
+  "description": "A personal resource tracker mini map for New World.",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.4.1",
@@ -9,9 +12,10 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "aser": "^1.0.0",
     "concurrently": "^6.5.1",
     "cross-env": "^7.0.3",
-    "electron": "^14.0.0",
+    "electron-is-dev": "^2.0.0",
     "eslint": "^7.32.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -30,7 +34,21 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "electron-react": "concurrently \" cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-react": "concurrently \" cross-env BROWSER=none npm start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:build": "yarn build && electron-builder",
+    "electron:start": "wait-on tcp:3000 && electron .",
+    "electron:step1": "yarn build",
+    "electron:step2": "electron-builder"
+  },
+  "build": {
+    "extends": null,
+    "appId": "com.example.NW_MiniMap",
+    "productName": "NW_MiniMap",
+    "asar": false,
+    "files": [
+      "build/**/*",
+      "main.js"
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -49,5 +67,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^14.0.0",
+    "electron-builder": "^22.10.5",
+    "electron-packager": "^15.4.0"
   }
 }

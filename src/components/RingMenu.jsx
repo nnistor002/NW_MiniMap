@@ -90,7 +90,7 @@ class RingMenu extends React.Component {
           },
         });
 
-        if (window.innerWidth < 1900) {
+        if (window.innerWidth < 2500) {
           z.style.transform = "scale(.8)";
         }
       }
