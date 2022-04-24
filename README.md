@@ -1,8 +1,5 @@
 ```diff
-Demo Page Created
-
-This was created to be a Desktop Application running as a standalone executable program using Electrion.js! 
-
+--- Demo Page Created ---
 ```
 
 # New World Offline Mini-Map
