@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/NW_MiniMap/static/css/main.56a04ecc.chunk.css",
-    "main.js": "/NW_MiniMap/static/js/main.97562fd0.chunk.js",
-    "main.js.map": "/NW_MiniMap/static/js/main.97562fd0.chunk.js.map",
+    "main.js": "/NW_MiniMap/static/js/main.d2781071.chunk.js",
+    "main.js.map": "/NW_MiniMap/static/js/main.d2781071.chunk.js.map",
     "runtime-main.js": "/NW_MiniMap/static/js/runtime-main.e7052ca7.js",
     "runtime-main.js.map": "/NW_MiniMap/static/js/runtime-main.e7052ca7.js.map",
     "static/js/2.b46df685.chunk.js": "/NW_MiniMap/static/js/2.b46df685.chunk.js",
@@ -13,12 +13,12 @@
     "static/css/main.56a04ecc.chunk.css.map": "/NW_MiniMap/static/css/main.56a04ecc.chunk.css.map",
     "static/js/2.b46df685.chunk.js.LICENSE.txt": "/NW_MiniMap/static/js/2.b46df685.chunk.js.LICENSE.txt",
     "static/media/New_World_Map_FinalSD_EDIT.9ea9daaf.jpg": "/NW_MiniMap/static/media/New_World_Map_FinalSD_EDIT.9ea9daaf.jpg",
-    "static/media/WelcomeScreen.003366c9.png": "/NW_MiniMap/static/media/WelcomeScreen.003366c9.png"
+    "static/media/WelcomeScreen.8598c5db.png": "/NW_MiniMap/static/media/WelcomeScreen.8598c5db.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e7052ca7.js",
     "static/js/2.b46df685.chunk.js",
     "static/css/main.56a04ecc.chunk.css",
-    "static/js/main.97562fd0.chunk.js"
+    "static/js/main.d2781071.chunk.js"
   ]
 }
