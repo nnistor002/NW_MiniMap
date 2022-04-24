@@ -1,8 +1,9 @@
 ```diff
---- Demo Page Created --- This was created to be a Desktop Application running as a standalone executable program using Electrion.js! 
+--- Demo Page Created --- 
+This was created to be a Desktop Application running as a standalone executable program using Electrion.js! 
 ```
 
-#Things To Keep in Mind:
+```#Things To Keep in Mind:```
 
 	1) The resolution was intended to be capped at 1600x900 screen resolution or higher. In short, its 
 	not intended to be a responsive webapp for anything smaller than that.
